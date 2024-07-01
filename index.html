@@ -8,17 +8,22 @@
     <title>GRANHAND. 그랑핸드</title>
     <!-- 웹폰트 연결 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/animation.css">
+    <!-- fullpage 플러그인(구) 제이쿼리 라이브러리 연결 필수!!! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- fullpage 플러그인(구) 연결 필수!!! -->
+    <link rel="stylesheet" href="./styles/jquery.fullPage.css">
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--플러그인 필수 JS cdn 연결-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- CSS 연결 -->
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
     <!-- JS 연결 -->
     <script src="./script/script.js" defer></script>
 </head>
@@ -84,119 +89,118 @@
     <!--===== main =====-->
     <main>
         <!-- main1 : first -->
-        <div class="first">
-            <video src="./video/granhand_dosan.mp4" autoplay muted loop></video>
-            <p><img src="./images/mouse_icn.svg" alt="#"></p>
-        </div>
-        <!-- main2 : brand -->
-        <div class="brand">
-            <div class="img"><img src="./images/brand.jpg" alt=""></div>
-            <div class="brand_txt">
-                <h2>Sometimes you win,<br>Sometimes you learn.</h2>
-                <p>
-                    향은 보이지도, 잡히지도 않지만, 우리에게 수많은 기억과 감정을 각인시키고,<br>나아가 우리 삶 속에서 많은 부분을 결정합니다. 그랑핸드는 이러한 향의 가치를<br>믿으며, 이들 매개로 한 끊임없는 시도들 동해 향의 일상화들 꿈꿈니다. 그랑핸드는<br>쉽게 소비되고 잊혀질 무언가가 아닌, 보이지 않는 곳에서 뚜렷한 존재감으로 모든<br>사람들에게 우리의 마음과 온기를 전하고 싶습니다.
-                </p>
-            </div>
-        </div>
-        <!-- main3 : shop -->
-        <div class="shop">
-            <a href="./shop.html" class="title">Shop</a>
-            <div class="product_wrap">
-                <a class="product_contents">
-                    <h2>Gift Set</h2>
-                    <h3>Multi Perfume & Sachet Set</h3>
-                    <p><img src="./images/p_003.jpg" alt=""></p>
-                    <p>그랑핸드 기프트 세트로 소중한 사람을 위한 선물을 준비해 보세요.</p>
-                </a>
-                <a class="product_contents">
-                    <h2>Gift Set</h2>
-                    <h3>Multi Perfume & Sachet Set</h3>
-                    <p><img src="./images/p_003.jpg" alt=""></p>
-                    <p>그랑핸드 기프트 세트로 소중한 사람을 위한 선물을 준비해 보세요.</p>
-                </a>
-                <a class="product_contents">
-                    <h2>Gift Set</h2>
-                    <h3>Multi Perfume & Sachet Set</h3>
-                    <p><img src="./images/p_003.jpg" alt=""></p>
-                    <p>그랑핸드 기프트 세트로 소중한 사람을 위한 선물을 준비해 보세요.</p>
-                </a>
-                <a class="product_contents">
-                    <h2>Hand Wash</h2>
-                    <h3>Susie Salmon Hand Wash</h3>
-                    <p><img src="./images/p_013.jpg" alt=""></p>
-                    <p>달콤한 과일을 먹은 뒤의 낮잠.</p>
-                </a>
-                <a class="product_contents">
-                    <h2>Blend</h2>
-                    <h3>Brown Sugar Blend 200g</h3>
-                    <p><img src="./images/p_006.jpg" alt=""></p>
-                    <p>달콤하고 고소한 브라운 슈거</p>
-                </a>
-                <a class="product_contents">
-                    <h2>Mango Cake</h2>
-                    <h3>Pick Up Order</h3>
-                    <p><img src="./images/p_008.jpg" alt=""></p>
-                    <p>콤포타블 커피의 생망고 케이크.<!-- <br> -->네이버 예약을 통해 간편하게 주문하고 픽업하실 수 있습니다.</p>
-                </a>
-            </div>
-        </div>
-        <!-- main4 : store -->
-        <div class="store">
-            <a href="./store.html" class="title">Store</a>
-            <div class="swiper store-slide">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide store_1">
-                        <a href="#" class="bg">
-                            <h2 class="store_name">GRANHAND. Seogyo<span>8th Store.</span></h2>
-                            <h3>최대 규모의 플래그십 스토어<br>그랑핸드 서교점</h3>
-                            <p>조용한 골목길에 위치한 서교점은 너른 마당에 있는 2층짜리 단독 주택으로 그랑핸드와 콤포타블이 함께 구성되어<br>있습니다. 하나의 공간에서 후각부터 미각까지 다양한 감각으로 향을 경험해 보시기 바랍니다.</p>
-                        </a>
+        <div id="wrap">
+            <div class="section first">
+                <div class="first_wrap">
+                    <video src="./video/granhand_dosan.mp4" autoplay muted loop id="main_video"></video>
+                    <div class="mouse_wrap">
+                        <div class="mouse"><div class="wheel"></div></div>
+                        <div><span class="unu"></span> <span class="doi"></span> <span class="trei"></span> </div>
                     </div>
-                    <div class="swiper-slide store_2">
-                        <a href="#" class="bg">
-                            <h2 class="store_name">GRANHAND. Dosan<span>6th Store.</span></h2>
-                            <h3>한강 이남의 유일한<br>여섯번째 오프라인 스토어, 도산점</h3>
-                            <p>그랑핸드만의 패브릭 패턴의 텍스처와 투박하게 마무리한듯한 물성,<br>그리고 일일히 조각칼로 작업한 카빙 등 기계가 만들어낼 수 없는 사람만의 따뜻한 손길이 느껴지는 결이 특징입니다.</p>
-                        </a>
+                </div>
+            </div>
+            <!-- main2 : brand -->
+            <div class="section brand">
+                <div class="brand_wrap">
+                    <div class="img"><img src="./images/brand.jpg" alt=""></div>
+                    <div class="brand_txt">
+                        <h2>Sometimes you win,<br>Sometimes you learn.</h2>
+                        <p>
+                            향은 보이지도, 잡히지도 않지만, 우리에게 수많은 기억과 감정을 각인시키고,<br>나아가 우리 삶 속에서 많은 부분을 결정합니다. 그랑핸드는 이러한 향의 가치를<br>믿으며, 이들 매개로 한 끊임없는 시도들 동해 향의 일상화를 꿈꿉니다. 그랑핸드는<br>쉽게 소비되고 잊혀질 무언가가 아닌, 보이지 않는 곳에서 뚜렷한 존재감으로 모든<br>사람들에게 우리의 마음과 온기를 전하고 싶습니다.
+                        </p>
                     </div>
-                    <div class="swiper-slide store_3">
-                        <a href="#" class="bg">
-                            <h2 class="store_name">GRANHAND. Mapo<span>4th Store.</span></h2>
-                            <h3>한적함과 자유로움, 그리고 자연을 즐길 수 있는<br>그랑핸드 마포점</h3>
-                            <p>길 위에 조용히 위치하여, 긴 산책로를 걷다가 우연히 발견하여 호기심에 들어오시는 고객님을 기다리는 곳입니다.<br>하늘은 푸르고, 단풍은 붉게 물들고, 걷기 가장 좋은 계절인 가을의 마포점을 방문해보세요.</p>
+                </div>
+            </div>
+            <!-- main3 : shop -->
+            <div class="section shop">
+                <div class="shop_wrap">
+                    <a href="./shop.html" class="title">Shop</a>
+                    <div class="product_wrap">
+                        <a class="product_contents">
+                            <h2>Gift Set</h2>
+                            <h3>Multi Perfume & Sachet Set</h3>
+                            <p><img src="./images/p_003.jpg" alt=""></p>
+                            <p>그랑핸드 기프트 세트로 소중한 사람을 위한 선물을 준비해 보세요.</p>
+                        </a>
+                        <a class="product_contents">
+                            <h2>Hand Wash</h2>
+                            <h3>Susie Salmon Hand Wash</h3>
+                            <p><img src="./images/p_013.jpg" alt=""></p>
+                            <p>달콤한 과일을 먹은 뒤의 낮잠.</p>
+                        </a>
+                        <a class="product_contents">
+                            <h2>Perfume</h2>
+                            <h3>MUNAKI. Perfume</h3>
+                            <p><img src="./images/p_010.jpg" alt=""></p>
+                            <p>다가오는 비구름에 서둘러 내려오는 산길.</p>
+                        </a>
+                        <a class="product_contents">
+                            <h2>Mango Cake</h2>
+                            <h3>Pick Up Order</h3>
+                            <p><img src="./images/p_008.jpg" alt=""></p>
+                            <p>콤포타블 커피의 생망고 케이크.<!-- <br> -->네이버 예약을 통해 간편하게 주문하고 픽업하실 수 있습니다.</p>
                         </a>
                     </div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
-        </div>
-        <!-- main5 : journal -->
-        <div class="journal">
-            <a href="./journal.html" class="title">Journal</a>
-            <div class="journal_contents">
-                <div class="j_main">
-                    <a href="#"><img src="./images/j_main.png" alt=""></a>
-                    <div class="j_text">
-                        <h2>[News] Playlist Vol.1 ‘TOIT VERT.</h2>
-                        <p>트와 베르만의 푸르고 시원한 느낌을 다채로운 무드로 담은<br>그랑핸드의 첫 번째 플레이리스트.</p>
+            <!-- main4 : store -->
+            <div class="section store">
+                <a href="./store.html" class="title">Store</a>
+                <div class="swiper store-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide store_1">
+                            <a href="#" class="bg">
+                                <h2 class="store_name">GRANHAND. Seogyo<span>8th Store.</span></h2>
+                                <h3>최대 규모의 플래그십 스토어<br>그랑핸드 서교점</h3>
+                                <p>조용한 골목길에 위치한 서교점은 너른 마당에 있는 2층짜리 단독 주택으로 그랑핸드와 콤포타블이 함께 구성되어<br>있습니다. 하나의 공간에서 후각부터 미각까지 다양한 감각으로 향을 경험해 보시기 바랍니다.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide store_2">
+                            <a href="#" class="bg">
+                                <h2 class="store_name">GRANHAND. Dosan<span>6th Store.</span></h2>
+                                <h3>한강 이남의 유일한<br>여섯번째 오프라인 스토어, 도산점</h3>
+                                <p>그랑핸드만의 패브릭 패턴의 텍스처와 투박하게 마무리한듯한 물성,<br>그리고 일일히 조각칼로 작업한 카빙 등 기계가 만들어낼 수 없는 사람만의 따뜻한 손길이 느껴지는 결이 특징입니다.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide store_3">
+                            <a href="#" class="bg">
+                                <h2 class="store_name">GRANHAND. Mapo<span>4th Store.</span></h2>
+                                <h3>한적함과 자유로움, 그리고 자연을 즐길 수 있는<br>그랑핸드 마포점</h3>
+                                <p>길 위에 조용히 위치하여, 긴 산책로를 걷다가 우연히 발견하여 호기심에 들어오시는 고객님을 기다리는 곳입니다.<br>하늘은 푸르고, 단풍은 붉게 물들고, 걷기 가장 좋은 계절인 가을의 마포점을 방문해보세요.</p>
+                            </a>
+                        </div>
                     </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="j_sub">
-                    <div class="j_sub_item">
-                        <h2>어린 시절의 노스텔지어 : 이안 호워스</h2>
-                        <a href="#"><img src="./images/j_sub_1.png" alt=""></a>
-                        <p>불완했던 시절의 향수를 포착하는 사진작가 이안 호워스의 작품으로 만나는<br>완전한 그리움을 소개합니다.</p>
+            </div>
+            <!-- main5 : journal -->
+            <div class="section journal">
+                <a href="./journal.html" class="title">Journal</a>
+                <div class="journal_contents">
+                    <div class="j_main">
+                        <a href="#"><img src="./images/j_main.png" alt=""></a>
+                        <div class="j_text">
+                            <h2>[News] Playlist Vol.1 ‘TOIT VERT.</h2>
+                            <p>트와 베르만의 푸르고 시원한 느낌을 다채로운 무드로 담은<br>그랑핸드의 첫 번째 플레이리스트.</p>
+                        </div>
                     </div>
-                    <div class="j_sub_item">
-                        <h2>따뜻한 남쪽 나라의 음악</h2>
-                        <a href="#"><img src="./images/j_sub_2.png" alt=""></a>
-                        <p>불완했던 시절의 향수를 포착하는 사진작가 이안 호워스의 작품으로 만나는<br>완전한 그리움을 소개합니다.</p>
-                    </div>
-                    <div class="j_sub_item">
-                        <h2>해방촌 따라 걷기, Day to Night</h2>
-                        <a href="#"><img src="./images/j_sub_3.png" alt=""></a>
-                        <p>다가오는 봄, 따스한 낮부터 선선한 밤까지. 하루를 완벽하게 즐길 수 있는<br>해방촌의 구석구석을 소개합니다.</p>
+                    <div class="j_sub">
+                        <div class="j_sub_item">
+                            <h2>어린 시절의 노스텔지어 : 이안 호워스</h2>
+                            <a href="#"><img src="./images/j_sub_1.png" alt=""></a>
+                            <p>불완했던 시절의 향수를 포착하는 사진작가 이안 호워스의 작품으로 만나는<br>완전한 그리움을 소개합니다.</p>
+                        </div>
+                        <div class="j_sub_item">
+                            <h2>따뜻한 남쪽 나라의 음악</h2>
+                            <a href="#"><img src="./images/j_sub_2.png" alt=""></a>
+                            <p>불완했던 시절의 향수를 포착하는 사진작가 이안 호워스의 작품으로 만나는<br>완전한 그리움을 소개합니다.</p>
+                        </div>
+                        <div class="j_sub_item">
+                            <h2>해방촌 따라 걷기, Day to Night</h2>
+                            <a href="#"><img src="./images/j_sub_3.png" alt=""></a>
+                            <p>다가오는 봄, 따스한 낮부터 선선한 밤까지. 하루를 완벽하게 즐길 수 있는<br>해방촌의 구석구석을 소개합니다.</p>
+                        </div>
                     </div>
                 </div>
             </div>

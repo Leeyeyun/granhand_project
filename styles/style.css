@@ -1,1 +1,60 @@
 main {}
+/* 공통 설정 */
+main .first .first_wrap, main .brand .brand_wrap, main .shop .shop_wrap {height:100%; overflow:hidden;}
+/*------------------ 1. first ------------------*/
+main .first .first_wrap {
+    width:100vw; position:relative;
+    display:flex; align-items:center;justify-content:center;
+}
+main #wrap .first .first_wrap video {width:1920px;}
+
+/* mouse 스크롤다운 아이콘 디자인 */
+main #wrap .first .first_wrap .mouse_wrap {
+    /* border:1px solid red; */ height:max-content; position:absolute; bottom:100px; width:100vw; display:flex; flex-flow:column nowrap; justify-content:center; align-items:center; opacity:0.9;
+}
+main #wrap .first .first_wrap .mouse_wrap .mouse {
+    width:30px; height:42px; border:2px solid #fff; border-radius:15px; display:flex; justify-content:center;
+}
+main #wrap .first .first_wrap .mouse_wrap .mouse .wheel {
+    width:2px; height:8px; background-color:#fff; border-radius:20px; margin-top:10px;
+    animation:up_down 1.2s linear both infinite, wheel_opa 1.2s linear both infinite;
+}
+main #wrap .first .first_wrap .mouse_wrap div:last-child {
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center; margin-top:10px;
+}
+main #wrap .first .first_wrap .mouse_wrap div > span {
+    background-image:url(../images/mouse_arrow.svg);
+    width:16px; height:8px; display:inline-block; background-repeat:no-repeat;
+    margin-bottom:3px;
+}
+main .first .first_wrap .mouse_wrap div .unu {animation:opa 1.2s linear both infinite;}
+main .first .first_wrap .mouse_wrap div .doi {animation:opa 1.2s linear both infinite 0.2s;}
+main .first .first_wrap .mouse_wrap div .trei {margin-bottom:0; animation:opa 1.2s linear both infinite 0.4s;}
+/* e:mouse 스크롤다운 */
+/*------------------ 2. brand ------------------*/
+main .brand {}
+main .brand .brand_wrap {
+    display:flex; padding:0 140px; align-items:center; justify-content:space-between;
+}
+main .brand .brand_wrap .img {height:100vh;}
+main .brand .brand_wrap .img img {height:100%;}
+main .brand .brand_wrap .brand_txt {text-align:center; width:60%;}
+main .brand .brand_wrap .brand_txt h2 {
+    font-size:3rem; font-weight:700; text-transform:uppercase; line-height:1.2; margin-bottom:60px;
+}
+main #wrap .brand .brand_wrap .brand_txt p {letter-spacing:-0.2px; line-height:2.0;}
+/*------------------ 3. shop ------------------*/
+main .shop {}
+main .shop .shop_wrap {}
+main .shop .shop_wrap .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px;}
+main .shop .shop_wrap .title::after {
+    content:''; display:inline-block;
+    width:30px; height:30px; background-image:url(../images/arrow_right.svg);
+    background-repeat:no-repeat
+}
+main .shop .shop_wrap .product_wrap .product_contents {}
+main .shop .shop_wrap .product_wrap .product_contents h2 {font-size:1.125rem; font-weight:700; letter-spacing:0.2px;}
+main .shop .shop_wrap .product_wrap .product_contents h3 {}
+main .shop .shop_wrap .product_wrap .product_contents > p {}
+main .shop .shop_wrap .product_wrap .product_contents > p > img {}
+main .shop .shop_wrap .product_wrap .product_contents > p:last-child {}
