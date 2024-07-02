@@ -15,9 +15,13 @@ const swiper1 = new Swiper('.shop-slide',{
 
 const swiper2 = new Swiper('.store-slide',{
     effect:'',
-    autoplay:false,
+    autoplay:{},
+    loop:true,
     slidesPerView:1,
-    /* spaceBetween:60, //위 slidesPerview 여백 */
+    navigation:{
+        nextEl:'.store-slide .swiper-button-next',
+        prevEl:'.store-slide .swiper-button-prev',
+    },
 });
 
 const swiper3 = new Swiper('.journal-slide',{
@@ -2994,5 +2998,15 @@ $('#fullpage').fullpage({
 
 //----------------------------------------
 //title mouseover 시 오른쪽에서 화살표 등장
+const titles = document.querySelectorAll('.title');
 
+titles.forEach(title => {
+    title.addEventListener('mouseenter', () => {
+        title.classList.add('arrow');
+    });
+
+    title.addEventListener('mouseleave', () => {
+        title.classList.remove('arrow');
+    });
+});
 
