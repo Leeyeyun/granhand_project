@@ -1,5 +1,4 @@
-body {background-color:#FDFBF4;}
-header {width:100vw; position:fixed; z-index:900; padding:40px 70px;}
+header {width:100vw; position:fixed; z-index:999; padding:40px 70px;}
 header .logo {position:absolute; left:70px; top:40px;}
 header .logo a {}
 header .logo a img {filter:invert(1);}
@@ -15,7 +14,7 @@ header nav .gnb > li > a {font-weight:700; margin-right:100px; color:#fff;
     padding:10px 5px; display:inline-block; text-align:center;
 }
 header nav .gnb > li > a::after {
-    content:''; display:inline-block; width:0; height:2px; background-color:white;
+    content:''; display:inline-block; width:0; height:2px; background-color:#fff;
     transition:width 0.5s;
 }
 header nav .gnb > li > a:hover::after {width:100%;}
@@ -23,6 +22,12 @@ header nav .gnb > li > a:last-child {margin-right:0;}
 header nav .gnb > li .sub {display:none;}
 header .lnb {position:absolute; right:70px; top:52px; display:flex; align-items:center;}
 header .lnb > a {margin-right:24px; filter:invert(1);}
+/* ------- js addClass ------- */
+header nav .gnb > li > a.active::after {
+    background-color:#282828; /* 변경된 배경색 */
+}
+header .lnb > a.invert {filter:invert(0);}
+header .logo > a > img.invert {filter:invert(0);}
 /* 언어 선택 양식 */
 header .lnb #lang_frm {}
 header .lnb #lang_frm .lang_wrap #lang_option {

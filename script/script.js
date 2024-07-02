@@ -1,11 +1,36 @@
-const swiper1 = new Swiper('.store-slide',{
+const swiper1 = new Swiper('.shop-slide',{
     effect:'',
-    autoplay:{},
-    //cube 옵션 : effect:'cube' 설정 시 가능
-    //자동재생(기본 3초(3000))
-    //autoplay:{delay:2000},
-    //마지막 슬라이드에서 시작 슬라이드로 자연스럽게 변환
-    loop:true,//기본값이 false임
+    /* autoplay:{}, */
+    slidesPerView:3,
+    /* spaceBetween:60, //위 slidesPerview 여백 */
+    scrollbar: {
+        el:'.swiper-scrollbar',
+        draggable:true,
+        hide:false,
+    },
+    breakpoints: { //반응형 조건 속성
+    1200: {slidesPerView:3},
+    },
+});
+
+const swiper2 = new Swiper('.store-slide',{
+    effect:'',
+    autoplay:false,
+    slidesPerView:1,
+    /* spaceBetween:60, //위 slidesPerview 여백 */
+});
+
+const swiper3 = new Swiper('.journal-slide',{
+    effect:'',
+    autoplay:false,
+    slidesPerView:2,
+    spaceBetween:35,
+    scrollbar: {
+        el:'.swiper-scrollbar',
+        draggable:true,
+        hide:false,
+    },
+    /* spaceBetween:60, //위 slidesPerview 여백 */
 });
 
 // fullpage js 기본 설정
@@ -2934,12 +2959,40 @@ const swiper1 = new Swiper('.store-slide',{
 });
 
 // fullpage js 플러그인 연결 필수!
-$('#wrap').fullpage({
+$('#fullpage').fullpage({
     scrollBar:true,
     scrollingSpeed:800,
     onLeave:function(index, nextIndex, direction){
         //현재 스크롤 위치 인식
-        console.log(index, nextIndex, direction)
+        console.log(index, nextIndex, direction);
+        // "down" 방향일 때 조건
+        if (direction == 'down' && (index == 1 || index == 3 || index == 5)) {
+            console.log(index);
+            $('nav .gnb > li > a').css('color', '#282828');
+            $('nav .gnb > li > a').addClass('active');
+            $('header .lnb > a').addClass('invert');
+            $('header .logo > a > img').addClass('invert');
+        }
+        // "up" 방향일 때 조건
+        else if (direction == 'up' && (index == 7 || index == 5 || index == 4)) {
+            console.log(index);
+            $('nav .gnb > li > a').css('color', '#282828');
+            $('nav .gnb > li > a').addClass('active');
+            $('header .lnb > a').addClass('invert');
+            $('header .logo > a > img').addClass('invert');
+        }
+        // 그 외의 경우
+        else {
+            console.log(index)
+            $('nav .gnb > li > a').css('color', '#fff');
+            $('nav .gnb > li > a').removeClass('active');
+            $('header .lnb > a').removeClass('invert');
+            $('header .logo > a > img').removeClass('invert');
+        }
     },
 })
+
+//----------------------------------------
+//title mouseover 시 오른쪽에서 화살표 등장
+
 

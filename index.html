@@ -88,11 +88,19 @@
     </header>
     <!--===== main =====-->
     <main>
-        <!-- main1 : first -->
-        <div id="wrap">
+        <div id="fullpage">
+            <!-- main1 : first -->
             <div class="section first">
                 <div class="first_wrap">
-                    <video src="./video/granhand_dosan.mp4" autoplay muted loop id="main_video"></video>
+                    <!-- <video src="./video/granhand_dosan.mp4" autoplay muted loop id="main_video"></video> -->
+                    <div id="wrap">
+                        <div class="section" id="section0">
+                            <!-- We use the "muted" property to auto-play the video when using the fullPage.js attribute "data-autoplay" -->
+                            <video class="overlay-video" loop muted playsinline data-autoplay>
+                                <source src="./video/granhand_dosan.mp4" type="video/mp4">
+                            </source></source></video>
+                        </div>
+                    </div>
                     <div class="mouse_wrap">
                         <div class="mouse"><div class="wheel"></div></div>
                         <div><span class="unu"></span> <span class="doi"></span> <span class="trei"></span> </div>
@@ -114,7 +122,7 @@
             <!-- main3 : shop -->
             <div class="section shop">
                 <div class="shop_wrap">
-                    <a href="./shop.html" class="title">Shop</a>
+                    <div class="sub_link"><a href="./shop.html" class="title">Shop</a></div>
                     <div class="swiper shop-slide">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide shop_1">
@@ -150,96 +158,117 @@
                                 </a>
                             </div>
                         </div>
-                     </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
                 </div>
             </div>
             <!-- main4 : store -->
             <div class="section store">
-                <a href="./store.html" class="title">Store</a>
-                <div class="swiper store-slide">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide store_1">
-                            <a href="#" class="bg">
-                                <h2 class="store_name">GRANHAND. Seogyo<span>8th Store.</span></h2>
-                                <h3>최대 규모의 플래그십 스토어<br>그랑핸드 서교점</h3>
-                                <p>조용한 골목길에 위치한 서교점은 너른 마당에 있는 2층짜리 단독 주택으로 그랑핸드와 콤포타블이 함께 구성되어<br>있습니다. 하나의 공간에서 후각부터 미각까지 다양한 감각으로 향을 경험해 보시기 바랍니다.</p>
-                            </a>
+                <div class="store_wrap">
+                    <div class="sub_link"><a href="./store.html" class="title">Store</a></div>
+                    <div class="swiper store-slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide store_1">
+                                <a href="#" class="bg">
+                                    <h2 class="store_name">GRANHAND. Seogyo<span>8th Store.</span></h2>
+                                    <div class="btm">
+                                        <h3>최대 규모의 플래그십 스토어<br>그랑핸드 서교점</h3>
+                                        <p>조용한 골목길에 위치한 서교점은 너른 마당에 있는 2층짜리 단독 주택으로 그랑핸드와 콤포타블이 함께 구성되어<br>있습니다. 하나의 공간에서 후각부터 미각까지 다양한 감각으로 향을 경험해 보시기 바랍니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide store_2">
+                                <a href="#" class="bg">
+                                    <h2 class="store_name">GRANHAND. Dosan<span>6th Store.</span></h2>
+                                    <div class="btm">
+                                        <h3>한강 이남의 유일한<br>여섯번째 오프라인 스토어, 도산점</h3>
+                                        <p>그랑핸드만의 패브릭 패턴의 텍스처와 투박하게 마무리한듯한 물성,<br>그리고 일일히 조각칼로 작업한 카빙 등 기계가 만들어낼 수 없는 사람만의 따뜻한 손길이 느껴지는 결이 특징입니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide store_3">
+                                <a href="#" class="bg">
+                                    <h2 class="store_name">GRANHAND. Mapo<span>4th Store.</span></h2>
+                                    <div class="btm">
+                                        <h3>한적함과 자유로움, 그리고 자연을 즐길 수 있는<br>그랑핸드 마포점</h3>
+                                        <p>길 위에 조용히 위치하여, 긴 산책로를 걷다가 우연히 발견하여 호기심에 들어오시는 고객님을 기다리는 곳입니다.<br>하늘은 푸르고, 단풍은 붉게 물들고, 걷기 가장 좋은 계절인 가을의 마포점을 방문해보세요.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide store_2">
-                            <a href="#" class="bg">
-                                <h2 class="store_name">GRANHAND. Dosan<span>6th Store.</span></h2>
-                                <h3>한강 이남의 유일한<br>여섯번째 오프라인 스토어, 도산점</h3>
-                                <p>그랑핸드만의 패브릭 패턴의 텍스처와 투박하게 마무리한듯한 물성,<br>그리고 일일히 조각칼로 작업한 카빙 등 기계가 만들어낼 수 없는 사람만의 따뜻한 손길이 느껴지는 결이 특징입니다.</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide store_3">
-                            <a href="#" class="bg">
-                                <h2 class="store_name">GRANHAND. Mapo<span>4th Store.</span></h2>
-                                <h3>한적함과 자유로움, 그리고 자연을 즐길 수 있는<br>그랑핸드 마포점</h3>
-                                <p>길 위에 조용히 위치하여, 긴 산책로를 걷다가 우연히 발견하여 호기심에 들어오시는 고객님을 기다리는 곳입니다.<br>하늘은 푸르고, 단풍은 붉게 물들고, 걷기 가장 좋은 계절인 가을의 마포점을 방문해보세요.</p>
-                            </a>
-                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
             </div>
             <!-- main5 : journal -->
             <div class="section journal">
-                <a href="./journal.html" class="title">Journal</a>
-                <div class="journal_contents">
-                    <div class="j_main">
-                        <a href="#"><img src="./images/j_main.png" alt=""></a>
-                        <div class="j_text">
-                            <h2>[News] Playlist Vol.1 ‘TOIT VERT.</h2>
-                            <p>트와 베르만의 푸르고 시원한 느낌을 다채로운 무드로 담은<br>그랑핸드의 첫 번째 플레이리스트.</p>
+                <div class="journal_wrap">
+                    <div class="sub_link"><a href="./journal.html" class="title">Journal</a></div>
+                    <div class="journal_contents">
+                        <div class="j_main">
+                            <a href="#"><img src="./images/j_main.png" alt=""></a>
+                            <div class="j_text">
+                                <h2>[News] Playlist Vol.1 ‘TOIT VERT.</h2>
+                                <p>트와 베르만의 푸르고 시원한 느낌을 다채로운 무드로 담은<br>그랑핸드의 첫 번째 플레이리스트.</p>
+                            </div>
+                        </div>
+                        <div class="swiper journal-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide journal_1">
+                                    <div class="j_sub_item">
+                                        <h2>어린 시절의 노스텔지어 : 이안 호워스</h2>
+                                        <a href="#"><img src="./images/j_sub_1.png" alt=""></a>
+                                        <p>불완했던 시절의 향수를 포착하는 사진작가 이안 호워스의 작품으로 만나는<br>완전한 그리움을 소개합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide journal_2">
+                                    <div class="j_sub_item">
+                                        <h2>따뜻한 남쪽 나라의 음악</h2>
+                                        <a href="#"><img src="./images/j_sub_2.png" alt=""></a>
+                                        <p>그랑핸드가 추천하는 특별한 장르의 음악들.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide journal_3">
+                                    <div class="j_sub_item">
+                                        <h2>해방촌 따라 걷기, Day to Night</h2>
+                                        <a href="#"><img src="./images/j_sub_3.png" alt=""></a>
+                                        <p>다가오는 봄, 따스한 낮부터 선선한 밤까지. 하루를 완벽하게 즐길 수 있는<br>해방촌의 구석구석을 소개합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="j_sub">
-                        <div class="j_sub_item">
-                            <h2>어린 시절의 노스텔지어 : 이안 호워스</h2>
-                            <a href="#"><img src="./images/j_sub_1.png" alt=""></a>
-                            <p>불완했던 시절의 향수를 포착하는 사진작가 이안 호워스의 작품으로 만나는<br>완전한 그리움을 소개합니다.</p>
+                </div>
+            </div>
+            <!--===== footer =====-->
+            <div class="section footer">
+                <div class="footer_wrap">
+                    <div class="top">
+                        <div class="slogan">
+                            <h2>Sometimes you win,<br>Sometimes you learn.</h2>
+                            <p>향은 보이지도, 잡히지도 않지만, 우리에게 수많은 기억과 감정을 각인시키고, 나아가 우리 삶 속에서 많은 부분을 결정합니다.<br>그랑핸드는 이러한 향의 가치를 믿으며, 이들 매개로 한 끊임없는 시도를 통해 향의 일상화를 꿈꿉니다. 그랑핸드는 쉽게 소비되고<br>잊혀질 무언가가 아닌, 보이지 않는 곳에서 뚜렷한 존재감으로 모든 사람들에게 우리의 마음과 온기를 전하고 싶습니다.</p>
                         </div>
-                        <div class="j_sub_item">
-                            <h2>따뜻한 남쪽 나라의 음악</h2>
-                            <a href="#"><img src="./images/j_sub_2.png" alt=""></a>
-                            <p>불완했던 시절의 향수를 포착하는 사진작가 이안 호워스의 작품으로 만나는<br>완전한 그리움을 소개합니다.</p>
+                        <div class="link">
+                            <a href="#"><img src="./images/instagram.svg" alt="인스타그램"></a>
+                            <a href="#"><img src="./images/youtube.svg" alt="유튜브"></a>
                         </div>
-                        <div class="j_sub_item">
-                            <h2>해방촌 따라 걷기, Day to Night</h2>
-                            <a href="#"><img src="./images/j_sub_3.png" alt=""></a>
-                            <p>다가오는 봄, 따스한 낮부터 선선한 밤까지. 하루를 완벽하게 즐길 수 있는<br>해방촌의 구석구석을 소개합니다.</p>
-                        </div>
+                    </div>
+                    <div class="btm">
+                        <p><em>대표</em>정준혁</p>
+                        <p><em>상호</em>(유)그랑핸드</p>
+                        <p><em>사업자번호</em>127-88-01898</p>
+                        <p><em>통신판매업</em>2020-서울종로-0623</p>
+                        <p><em>주소</em>서울시 종로구 자하문로4길 14-2</p>
+                        <p><em>메일</em>hello@granhand.com</p>
+                        <a href="#">이용약관</a>
+                        <p><em>개인정보관리책임자</em>정루아</p>
+                        <a href="#">개인정보처리방침</a>
+                        <p><em>호스팅</em>(주)아임웹</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <!--===== footer =====-->
-    <footer>
-        <div class="top">
-            <div class="slogan">
-                <h2>Sometimes you win,<br>Sometimes you learn.</h2>
-                <p>향은 보이지도, 잡히지도 않지만, 우리에게 수많은 기억과 감정을 각인시키고, 나아가 우리 삶 속에서 많은 부분을 결정합니다.<br>그랑핸드는 이러한 향의 가치를 믿으며, 이들 매개로 한 끊임없는 시도를 통해 향의 일상화를 꿈꿉니다. 그랑핸드는 쉽게 소비되고<br>잊혀질 무언가가 아닌, 보이지 않는 곳에서 뚜렷한 존재감으로 모든 사람들에게 우리의 마음과 온기를 전하고 싶습니다.</p>
-            </div>
-            <div class="link">
-                <a href="#"><img src="./images/instagram.svg" alt="인스타그램"></a>
-                <a href="#"><img src="./images/youtube.svg" alt="유튜브"></a>
-            </div>
-        </div>
-        <div class="btm">
-            <p><em>대표</em>정준혁</p>
-            <p><em>상호</em>(유)그랑핸드</p>
-            <p><em>사업자번호</em>127-88-01898</p>
-            <p><em>통신판매업</em>2020-서울종로-0623</p>
-            <p><em>주소</em>서울시 종로구 자하문로4길 14-2</p>
-            <p><em>메일</em>hello@granhand.com</p>
-            <a>이용약관</a>
-            <p><em>개인정보관리책임자</em>정루아</p>
-            <a>개인정보처리방침</a>
-            <p><em>호스팅</em>(주)아임웹</p>
-        </div>
-    </footer>
 </body>
 </html>
