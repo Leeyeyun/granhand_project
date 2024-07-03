@@ -37,6 +37,7 @@ const swiper3 = new Swiper('.journal-slide',{
     /* spaceBetween:60, //위 slidesPerview 여백 */
 });
 
+
 // fullpage js 기본 설정
 /*!
  * fullPage 2.9.7
@@ -2996,17 +2997,32 @@ $('#fullpage').fullpage({
     },
 })
 
-//----------------------------------------
 //title mouseover 시 오른쪽에서 화살표 등장
 const titles = document.querySelectorAll('.title');
 
 titles.forEach(title => {
-    title.addEventListener('mouseenter', () => {
+    title.addEventListener('mouseenter', (e)=>{
+        e.preventDefault();
         title.classList.add('arrow');
     });
 
-    title.addEventListener('mouseleave', () => {
+    title.addEventListener('mouseleave', (e)=>{
+        e.preventDefault();
         title.classList.remove('arrow');
     });
 });
+
+//journal main 이미지 mouseover 시 view 등장
+const j_main = document.querySelector('.journal_contents .j_main a')
+const view = document.querySelector('.j_main .view')
+console.log(j_main, view)
+j_main.addEventListener('mouseenter',()=>{
+    j_main.classList.add('display');
+    view.classList.add('view_on');
+})
+j_main.addEventListener('mouseleave',()=>{
+    j_main.classList.remove('display');
+    view.classList.remove('view_on');
+})
+
 

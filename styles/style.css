@@ -1,6 +1,6 @@
 /* 공통 설정 */
 main {background-color:#FDFBF4;}
-main .first .first_wrap, main .brand .brand_wrap, main .shop .shop_wrap, main .journal .journal_wrap {height:100vh; overflow:hidden;}
+main .first .first_wrap, main .brand .brand_wrap, main .shop .shop_wrap, main .store .store_wrap, main .journal .journal_wrap {height:100vh; overflow:hidden;}
 /* title 공통 디자인 */
 main .sub_link {border-bottom:2px solid #000; margin:130px 0 16px;}
 main .sub_link .title {
@@ -8,9 +8,10 @@ main .sub_link .title {
     display:inline-flex; align-items:center; line-height:60px;
 }
 main .title::after {
-    content:''; display:inline-block; margin-left:10px; opacity:0;
+    content:''; display:inline-block; margin-left:8px; opacity:0;
     width:30px; height:30px; background-image:url(../images/arrow_right.svg);
     background-repeat:no-repeat;
+    transition:margin-left 0.3s, opacity 0.3s;
 }
 main .title.arrow::after {margin-left:16px; opacity:1;}
 /*------------------ 1. first ------------------*/
@@ -78,22 +79,31 @@ main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_content
     line-height:1.5; font-size:0.875rem; color:#5f5f5f; padding:10px 0; height:max-content;
 }
 /*------------------ 4. store ------------------*/
-main .store {background-color:#0E0E0E; display:block;}
-main .store .store_wrap {height:100vh;}
-main .store .store_wrap .sub_link {border:0; margin-bottom:0;}
-main .store .store_wrap .sub_link .title {color:#fff; padding:0 140px; margin:130px 0 16px;}
+main .store {background-color:#0E0E0E;}
+main .store .store_wrap {padding:0 140px;}
+main .store .store_wrap .sub_link {border:0;}
+main .store .store_wrap .sub_link .title {color:#fff;}
 main .store .store_wrap .title::after {
     filter:invert(1);
 }
 /* store-swiper */
 main .store .store_wrap .store-slide {
-    height:580px; 
+    position:relative; z-index:150;
+    height:580px; width:calc(100% + 280px); left:-140px;
 }
 main .store .store_wrap .store-slide .swiper-slide {
-    padding:40px 140px;
+    padding:40px 140px; transition:background-size 0.5s;
+}
+main .store .store_wrap .store-slide .swiper-slide:hover {
+    background-size:102%;
+}
+main .store .store_wrap .store-slide .swiper-slide::after {
+    content:''; display:inline-block; width:100vw; height:100%;
+    background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)); position:absolute; left:0; top:0;
 }
 main .store .store_wrap .store-slide .swiper-slide .bg {
     width:100%; height:100%; display:flex; flex-flow:column nowrap; justify-content:flex-end;
+    position:relative; z-index:150;
 }
 main .store .store_wrap .store-slide .swiper-slide .bg .store_name {
     font-size:1.5rem; font-weight:700; letter-spacing:0.2px; color:#cbcbcb;
@@ -113,15 +123,32 @@ main .store .store_wrap .store-slide .swiper-slide .bg .btm p {
 }
 main .store .store_wrap .store-slide .store_1 {
     background-image:url(../images/store_1.jpg); background-repeat:no-repeat;
-    background-position:center; background-size: cover;
+    background-position:center; background-size:100%;
 }
 main .store .store_wrap .store-slide .store_2 {
-    background-image:url(../images/main_dosan.jpg); background-repeat:no-repeat;
-    background-position:center; background-size: cover;
+    background-image:url(../images/store_2.png); background-repeat:no-repeat;
+    background-position:center; background-size:100%;
 }
 main .store .store_wrap .store-slide .store_3 {
-    background-image:url(../images/main_mapo.jpg); background-repeat:no-repeat;
-    background-position:center; background-size:cover;
+    background-image:url(../images/store_3.jpg); background-repeat:no-repeat;
+    background-position:center; background-size:100%;
+}
+/* swipe arrow 디자인 변경 */
+main .store .store_wrap .store-slide .swiper-button-prev {
+    content:''; display:inline-block; opacity:0.5;
+    background-image:url(../images/big_arrow.svg);
+    width:93px; height:93px; background-repeat:no-repeat; background-size:cover;
+    color:transparent; left:70px; transform:translateY(-16px);
+    transition:opacity 0.3s;
+}
+main .store .store_wrap .store-slide .swiper-button-prev:hover,
+main .store .store_wrap .store-slide .swiper-button-next:hover {opacity:0.9;}
+main .store .store_wrap .store-slide .swiper-button-next {
+    content:''; display:inline-block; opacity:0.5;
+    background-image:url(../images/big_arrow.svg);
+    width:93px; height:93px; background-repeat:no-repeat; background-size:cover;
+    color:transparent; right:70px; transform:rotate(-180deg) translateY(16px);
+    transition:opacity 0.3s;
 }
 /*------------------ 5. journal ------------------*/
 main .journal .journal_wrap {padding:0 140px;}
@@ -129,9 +156,23 @@ main .journal .journal_wrap .sub_link {border:0;}
 main .journal .journal_wrap .journal_contents {display:flex; justify-content:space-between; align-items:center;}
 /* journal-왼쪽 */
 main .journal .journal_wrap .journal_contents .j_main {
-    width:38%; display:flex;
+    width:38%; display:flex; position:relative;
     flex-flow:column nowrap;
 }
+main .journal .journal_wrap .journal_contents .j_main > a {}
+main .journal .journal_wrap .journal_contents .j_main > a::after {
+    content:''; display:inline-block; width:100%; height:0; opacity:0; transition:height 0.6s cubic-bezier(0, 0, 0.1, 1.0), opacity 0.6s cubic-bezier(0, 0, 0.1, 1.0);
+    background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)); position:absolute; left:0; bottom:57px; z-index:150;
+}
+main .journal .journal_wrap .journal_contents .j_main > a.display::after {height:50%; opacity:1;}
+main .journal .journal_wrap .journal_contents .j_main .view {
+    display:flex; align-items:center; position:absolute; right:27px; bottom:75px;
+    z-index:150; opacity:0; transition:bottom 0.4s ease-out, opacity 0.4s ease-out;
+}
+main .journal .journal_wrap .journal_contents .j_main .view.view_on {bottom:80px; opacity:1;}
+main .journal .journal_wrap .journal_contents .j_main .view > p {color:#d9d9d9; font-size:0.875rem; font-weight:500;}
+main .journal .journal_wrap .journal_contents .j_main .view > p:last-child {width:18px; margin-left:8px;}
+main .journal .journal_wrap .journal_contents .j_main .view > p > img {width:100%; filter:invert(1);}
 main .journal .journal_wrap .journal_contents .j_main .j_text {display:flex; justify-content:space-between; padding:10px 0;}
 main .journal .journal_wrap .journal_contents .j_main .j_text > h2 {font-size:0.875rem; font-weight:700; line-height:1.2;}
 main .journal .journal_wrap .journal_contents .j_main .j_text > p {font-size:0.875rem; line-height:1.2; text-align:right;}
@@ -144,7 +185,7 @@ main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_su
 main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > a {display:inline-block;}
 main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > a > img {width:100%;}
 main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > h2 {font-size:0.875rem; font-weight:700; line-height:1.2; margin-bottom:10px;}
-main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > p {font-size:0.875rem; line-height:1.5; text-align:left; margin-top:10px; color:#5f5f5f;}
+main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > p {font-size:0.875rem; line-height:1.5; text-align:left; margin:10px 0 18px; color:#5f5f5f;}
 /*------------------ 6. footer ------------------*/
 main .footer {height:212px !important; padding:0 70px; display:flex; flex-flow:column nowrap;}
 main .footer .footer_wrap {
