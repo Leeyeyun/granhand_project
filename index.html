@@ -26,6 +26,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS 연결 -->
     <script src="./script/script.js" defer></script>
+    <script src="./script/common.js" defer></script>
 </head>
 <body>
     <!--===== header =====-->
@@ -64,8 +65,76 @@
                 <li><a href="./wallpaper.html">Wallpaper</a></li>
             </ul>
         </nav>
+        <!-- 검색창 -->
+        <div class="search_container">
+            <a href="#" class="close"><img src="./images/close_icn.svg" alt=""></a>
+            <h1><img src="./images/granhand_logo.png" alt="그랑핸드"></h1>
+            <form action="#" method="get" id="search_frm">
+                <fieldset class='search_wrap'>
+                    <legend class="skip">검색 양식</legend>
+                    <input type="text" name="scent_name" placeholder="나를 위한 향을 찾아보세요.">
+                </fieldset>
+            </form>
+            <div class="swiper rec-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide recommend_1">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들1</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="swiper-slide recommend_2">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들2</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="swiper-slide recommend_3">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들3</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <div class="lnb">
-            <a href="./search.html" class="search"><img src="./images/search_icn.svg" alt=""></a>
+            <a href="#" class="search"><img src="./images/search_icn.svg" alt="">
+            </a>
             <a href="./cart.html" class="cart"><img src="./images/bag_icn.svg" alt=""></a>
             <a href="./login.html" class="login"><img src="./images/mypage_icn.svg" alt=""></a>
             <!-- 언어 선택 form -->
@@ -208,6 +277,10 @@
                     <div class="journal_contents">
                         <div class="j_main">
                             <a href="#"><img src="./images/j_main.png" alt=""></a>
+                            <a href="#" class="view">
+                                <p>VIEW</p>
+                                <p><img src="./images/search_icn.svg" alt=""></p>
+                            </a>
                             <div class="j_text">
                                 <h2>[News] Playlist Vol.1 ‘TOIT VERT.</h2>
                                 <p>트와 베르만의 푸르고 시원한 느낌을 다채로운 무드로 담은<br>그랑핸드의 첫 번째 플레이리스트.</p>
@@ -237,6 +310,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-scrollbar"></div>
                         </div>
                     </div>
                 </div>
