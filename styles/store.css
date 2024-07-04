@@ -7,3 +7,22 @@ header nav .gnb > li > a::after {background-color:#282828;}
 main .store {max-width:1640px; margin:0 auto;}
 main .store .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:224px;}
 main .store > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
+/* 스토어 카테고리 디자인 */
+main .store .store_type {
+    position:relative; border:1px solid skyblue; text-align:center; display:flex;
+    justify-content:center; align-items:center; margin:50px 0;
+}
+main .store .store_type li > a {font-weight:700; line-height:31px; width:190px; letter-spacing:0.2px; display:inline-block;}
+main .store .store_type li:first-child > a {border-bottom:2px solid #000; margin-right:20px;}
+main .store .store_type li:last-child > a {color:#9d9d9d;}
+main .store .store_type li .store_category {position:absolute; display:none;}
+main .store .store_main {}
+main .store .store_main .store_title {display:flex; align-items:center;}
+main .store .store_main .store_title h2 {font-size:1.25rem; font-weight:700; margin-right:12px;}
+main .store .store_main .store_title .location {font-size:1.125rem; letter-spacing:0.2px; color:#5F5F5F;}
+main .store .store_main .store_video {width:100%; height:924px; overflow:hidden; text-align:center; margin:24px 0;}
+main .store .store_main .store_video video {width:100%;}
+main .store .store_main > p {line-height:2.0; letter-spacing:0.2px; word-break:normal;}
+/* store-img */
+main .store .store_img {margin:90px 0;/* display:inline-flex; flex-flow:row wrap; justify-content:space-between; */}
+main .store .store_img img {margin-bottom:32px;}
