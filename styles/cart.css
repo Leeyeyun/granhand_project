@@ -3,7 +3,6 @@ header .logo a img, header .lnb > a {filter:invert(0);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
-body {background-color:#FDFBF4}
 main {background-color:#FDFBF4; height:100vh; padding:0 140px;}
 main .cart {display:flex; flex-flow:column nowrap;}
 main .cart > h1 {

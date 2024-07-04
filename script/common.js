@@ -17,15 +17,15 @@ const search_icn = document.querySelector('header .lnb > .search')
 const search_container = document.querySelector('header .search_container')
 const close = document.querySelector('header .search_container .close')
 console.log(search_icn, search_container, close)
+/* 검색창 초기값 */
+search_container.style.transform = 'translateY(-100vh)'
 search_icn.addEventListener('click',(e)=>{
     e.preventDefault();
-    console.log(8)
     search_container.style.transform = 'translateY(0)'
     search_container.style.opacity = '1'
 })
 close.addEventListener('click',(e)=>{
     e.preventDefault();
-    console.log(8)
     search_container.style.transform = 'translateY(-100vh)'
     search_container.style.opacity = '0'
 })
