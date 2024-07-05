@@ -1,0 +1,5 @@
+/* store header 디자인 수정 */
+header .logo a img, header .lnb > a {filter:invert(0);}
+header nav .gnb > li > a {color:#282828;}
+header nav .gnb > li:nth-child(2) > a::after {width:100%;}
+header nav .gnb > li > a::after {background-color:#282828;}
