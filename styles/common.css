@@ -32,18 +32,22 @@ header nav .gnb > li > a.active::after {
 header .lnb > a.invert {filter:invert(0);}
 header .logo > a > img.invert {filter:invert(0);}
 /* 언어 선택 양식 */
-header .lnb #lang_frm {}
-header .lnb #lang_frm .lang_wrap #lang_option {
-    background-color:transparent; border:0; appearance:none; width:60px; height:30px;
-    background-image:url(../images/language_icn.svg), url(../images/arrow_drop_down_icn.svg);
-    background-repeat:no-repeat; background-position:left, right;
-    outline:0; cursor:pointer; transform:translateY(-1.5px); filter:brightness(180%);
+header .lnb .lang::after {
+    content:''; display:inline-block; background-repeat:no-repeat;
+    background-image:url(../images/arrow_drop_down_icn.svg);
+    width:30px; height:30px; background-size:cover;
 }
-header .lnb #lang_frm .lang_wrap #lang_option option[value=kor] {}
-header .lnb #lang_frm .lang_wrap #lang_option option:first-child {display:none;}
+header .lnb .lang_opt {position:absolute; z-index:999; top:40px; right:24px; display:none; flex-flow:column nowrap;}
+header .lnb .lang_opt.on {display:flex;}
+header .lnb .lang_opt > a {font-size:0.875rem; color:#5f5f5f; padding:10px 0; background-color:#fff;
+    border:1px solid #e0e0e0; transition:background-color 0.5s; width:110px; text-align:center;
+}
+header .lnb .lang_opt > a:hover {background-color:#ECECEC;}
+
 header .lnb .m_nav {display:none;}
 /* header gnb search 클릭 시 나오는 검색창 */
 header .search_container {
+    display:none;
     position:absolute; left:0; top:0; z-index:999; text-align:center;
     width:100vw; height:100vh; background-color:#485131;
     display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
@@ -66,19 +70,16 @@ header .search_container #search_frm .search_wrap input[name^=scent]::placeholde
     font-size:1.5rem; letter-spacing:0.2px; color:#9d9d9d;
 }
 header .search_container .rec-slide {
-    /* border:1px solid red; */ width:810px; overflow:hidden; margin:0 auto;
+    width:810px; overflow:hidden; margin:0 auto;
 }
 header .search_container .rec-slide .swiper-slide {width:500px;}
 header .search_container .rec-slide .swiper-slide .rec_wrap {
-    text-align:left; width:500px; /* border:1px solid blue; */
-    color:#fff;
+    text-align:left; width:500px; color:#fff;
 }
 header .search_container .rec-slide .swiper-slide .rec_wrap h2 {font-size:1.125rem; font-weight:700; letter-spacing:0.2px;}
 header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag {margin:16px 0 24px;}
 header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-weight:500; color:#fff; line-height:1.5; transition:opacity 0.2s;}
-header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a:hover {
-    opacity:0.6;
-}
+header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a:hover {opacity:0.6;}
 header .search_container .rec-slide .swiper-slide .rec_wrap > p {font-weight:200; font-size:0.875rem; letter-spacing:0.2px; line-height:1.7; color:#D9D9D9;}
 /* pagination css */
 header .search_container .rec-slide .swiper-wrapper {margin-bottom:50px;}

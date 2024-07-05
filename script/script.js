@@ -24,7 +24,7 @@ const swiper2 = new Swiper('.store-slide',{
     },
 });
 
-const swiper3 = new Swiper('.journal-slide',{
+const swiper3 = new Swiper('.sub-journal-slide',{
     effect:'',
     autoplay:false,
     slidesPerView:2,
@@ -45,7 +45,7 @@ $('#fullpage').fullpage({
         //현재 스크롤 위치 인식
         console.log(index, nextIndex, direction);
         // "down" 방향일 때 조건
-        if (direction == 'down' && (index == 1 || index == 3 || index == 5)) {
+        if (direction == 'down' && (index == 1 || index == 3 || index == 5 || index == 6)) {
             console.log(index);
             $('nav .gnb > li > a').css('color', '#282828');
             $('nav .gnb > li > a').addClass('active');

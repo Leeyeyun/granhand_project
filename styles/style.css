@@ -179,14 +179,17 @@ main .journal .journal_wrap .journal_contents .j_main .j_text > h2 {font-size:0.
 main .journal .journal_wrap .journal_contents .j_main .j_text > p {font-size:0.875rem; line-height:1.2; text-align:right;}
 main .journal .journal_wrap .journal_contents .j_main a > img {width:100%;}
 /* e:journal-왼쪽 */
-main .journal .journal_wrap .journal_contents .journal-slide {width:55%; margin:0;}
-main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item {
+main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%; margin:0;}
+main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item {
     width:100%; overflow:hidden;
 }
-main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > a {display:inline-block;}
-main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > a > img {width:100%;}
-main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > h2 {font-size:0.875rem; font-weight:700; line-height:1.2; margin-bottom:10px;}
-main .journal .journal_wrap .journal_contents .journal-slide .swiper-slide .j_sub_item > p {font-size:0.875rem; line-height:1.5; text-align:left; margin:10px 0 18px; color:#5f5f5f;}
+main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item > a {
+    display:inline-block; width:430px; height:290px; overflow:hidden;
+}
+main .journal .journal_wrap .journal_contents .sub-journal-slide .journal_1 .j_sub_item > a > img {transform:translateY(-50px);}
+main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item > a > img {width:100%;}
+main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item > h2 {font-size:0.875rem; font-weight:700; line-height:1.2; margin-bottom:10px;}
+main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item > p {font-size:0.875rem; line-height:1.5; text-align:left; margin:10px 0 18px; color:#5f5f5f;}
 /*------------------ 6. footer ------------------*/
 main .footer {height:212px !important; padding:0 70px; display:flex; flex-flow:column nowrap;}
 main .footer .footer_wrap {

@@ -2,29 +2,23 @@ body {
     background-image:url(../images/login_bg.jpg); background-repeat:no-repeat;
     background-position:auto; background-size: cover;
 }
-main {height:100vh; display:flex; justify-content:center; align-items:center; text-align:center;}
-/* footer 개별 디자인 */
-footer .footer_wrap {border-color:#5f5f5f;}
-footer .top .slogan h2, footer .btm, footer .btm a {color:#B3B3B3;}
-footer .top .slogan p {color:#E2DFDF;}
-footer .top .link a {filter:invert(1) brightness(150%);}
-footer .top .link a:hover {filter:invert(1) brightness(120%);}
 /* main - login */
+main {height:100vh; display:flex; justify-content:center; align-items:center; text-align:center;}
 main .login {
-    display:flex; flex-flow:column nowrap; justify-content:center;
-    background-color:rgba(255, 255, 255, 0.3);
-    padding:46px 36px; width:478px;
+    display:flex; flex-flow:column nowrap; justify-content:flex-start; align-items:center;
+    background-color:rgba(255, 255, 255, 0.35);
+    padding:46px 36px; width:478px; height:605px;
 }
 main .login > h2 {font-size:3rem; font-weight:700; color:#000;}
-main .login > p {font-size:0.875rem; margin:22px 0 15px;}
-main .login .member_option {display:flex;}
+main .login > p {font-size:0.875rem; margin:22px 0 15px; font-weight:500;}
+main .login .member_option {display:flex; width:100%;}
 main .login .member_option > a {
     line-height:45px; border-bottom:2px solid #000;
     font-weight:700; width:50%;
 }
-main .login .member_option > a:last-child {color:#fff; border-color:#fff; font-weight:500;}
-/* login_frm */
-main .login #member_login_frm {}
+main .login .member_option > a:last-child {color:#fff; border-color:#fff; font-weight:700;}
+/* login_frm-회원 */
+main .login #member_login_frm {width:100%;}
 main .login #member_login_frm .login_wrap {}
 main .login #member_login_frm .login_wrap .id_pw {display:flex; flex-flow:column nowrap; margin-top:24px;}
 main .login #member_login_frm .login_wrap .id_pw input[name^=user] {
@@ -48,17 +42,33 @@ main .login #member_login_frm .login_wrap .login_keep_find .login_keep span {col
 main .login #member_login_frm .join_login {display:flex; flex-flow:column nowrap; justify-content:center;}
 main .login #member_login_frm .join_login button {line-height:45px; border:0; font-weight:700;}
 main .login #member_login_frm .join_login .login_btn {color:#5f5f5f;}
-main .login #member_login_frm .join_login .join_btn {margin:8px 0 46px; background-color:#959595; color:#fff;}
-main .login #member_login_frm .join_login .kakao_btn {background-color:#FAE300; color:#391B1B;}
-
-/* checkbox 베이스 */
-/* main #join_frm .user_agree .agree_check li label[for*=agree] {
-    background-image:url(../images/today_unchecked.svg);
-    background-repeat:no-repeat; display:inline-block;
-    padding:2px 0 3px 25px;
-} */
-/* checkbox 활성화한 경우 */
-/* main #join_frm .user_agree .agree_check li input[name=agree]:checked + label {
-    background-image:url(../images/today_checked.svg);
+main .login #member_login_frm .join_login .join_btn {
+    margin:8px 0 46px; background-color:#959595; color:#fff;
+    line-height:45px; border:0; font-weight:700;
 }
- */
+main .login #member_login_frm .join_login .kakao_btn {background-color:#FAE300; color:#391B1B;}
+/* login_frm-비회원 */
+main .login #nonmember_login_frm {display:none; text-align:left; width:100%;}
+main .login #nonmember_login_frm .login_wrap {}
+main .login #nonmember_login_frm .login_wrap .order_phone {margin:24px 0 46px;}
+main .login #nonmember_login_frm .login_wrap .order_phone .order {margin-bottom:16px;}
+main .login #nonmember_login_frm .login_wrap .order_phone p {font-size:0.75rem; font-weight:500; margin-bottom:8px;}
+main .login #nonmember_login_frm .login_wrap .order_phone input[name^=user] {
+    outline:0; border:1px solid #e0e0e0; line-height:41px; width:100%;
+    font-size:0.875rem; font-weight:500; padding:0 16px;
+}
+main .login #nonmember_login_frm .order_check_join {display:flex; flex-flow:column nowrap; align-items:center;}
+main .login #nonmember_login_frm .order_check_join .order_check_btn {line-height:45px; border:0; font-weight:700; color:#5f5f5f; width:100%;}
+main .login #nonmember_login_frm .order_check_join .join_btn {
+    background-color:#959595; color:#fff; margin:8px 0 53px;
+    line-height:45px; font-weight:600; width:100%; text-align:center;
+}
+main .login #nonmember_login_frm > p {font-size:0.75rem; color:#fff; text-align:center;}
+main .login #nonmember_login_frm > p > a {font-size:0.75rem; color:#fff; font-weight:500; text-decoration: underline;}
+
+/* footer 개별 디자인 */
+footer .footer_wrap {border-color:#5f5f5f;}
+footer .top .slogan h2, footer .btm, footer .btm a {color:#B3B3B3;}
+footer .top .slogan p {color:#E2DFDF;}
+footer .top .link a {filter:invert(1) brightness(150%);}
+footer .top .link a:hover {filter:invert(1) brightness(120%);}

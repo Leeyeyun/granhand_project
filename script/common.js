@@ -29,3 +29,11 @@ close.addEventListener('click',(e)=>{
     search_container.style.transform = 'translateY(-100vh)'
     search_container.style.opacity = '0'
 })
+
+//lang icn 클릭 시 옵션 등장
+const lang = document.querySelector('.lnb .lang')
+const lang_opt = document.querySelector('.lang_opt')
+lang.addEventListener('click',(e)=>{
+    e.preventDefault();
+    lang_opt.classList.toggle('on')
+})
