@@ -20,6 +20,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS 연결 -->
+    <script src="./script/login.js" defer></script>
     <script src="./script/common.js" defer></script>
 </head>
 <body>
@@ -122,26 +123,37 @@
                             </p>
                         </section>
                     </div>
+                    <div class="swiper-slide recommend_4">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들4</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
         <div class="lnb">
-            <a href="#" class="search"><img src="./images/search_icn.svg" alt="">
-            </a>
+            <a href="#" class="search"><img src="./images/search_icn.svg" alt=""></a>
             <a href="./cart.html" class="cart"><img src="./images/bag_icn.svg" alt=""></a>
             <a href="./login.html" class="login"><img src="./images/mypage_icn.svg" alt=""></a>
-            <!-- 언어 선택 form -->
-            <form action="#" method="get" id="lang_frm">
-                <fieldset class="lang_wrap">
-                    <legend class="skip">언어선택 양식</legend>
-                    <select name="lang_option" id="lang_option">
-                        <option value=""></option>
-                        <option value="kor">한국어</option>
-                        <option value="eng">English</option>
-                    </select>
-                </fieldset>
-            </form>
+            <a href="#" class="lang"><img src="./images/language_icn.svg" alt=""></a>
+            <!-- 언어 선택 div -->
+            <div class="lang_opt">
+                <a href="#">한국어</a>
+                <a href="#">English</a>
+            </div>
             <!-- mobile side nav -->
             <div class="m_nav">
                 <a href="#" class="all_nav"><img src="./images/hamburger_icn.svg" alt="#"></a>
@@ -158,6 +170,7 @@
                 <a href="#">회원</a>
                 <a href="#">비회원 주문조회</a>
             </div>
+            <!-- 회원 -->
             <form action="#" method="get" id="member_login_frm">
                 <fieldset class="login_wrap">
                     <legend class="skip">회원 로그인양식</legend>
@@ -178,9 +191,30 @@
                 </fieldset>
                 <div class="join_login">
                     <button type="button" class="login_btn">로그인</button>
-                    <button type="button" class="join_btn">회원가입</button>
+                    <a href="#" class="join_btn">회원가입</a>
                     <button type="button" class="kakao_btn">카카오로 시작하기</button>
                 </div>
+            </form>
+            <!-- 비회원 -->
+            <form action="#" method="get" id="nonmember_login_frm">
+                <fieldset class="login_wrap">
+                    <legend class="skip">비회원 로그인양식</legend>
+                    <div class="order_phone">
+                        <div class="order">
+                            <p>주문 번호</p>
+                            <input type="text" name="user_order" id="user_order" placeholder="18자리 주문번호 입력" required>
+                        </div>
+                        <div class="phone">
+                            <p>휴대폰 번호</p>
+                            <input type="text" name="user_phone" id="user_phone" placeholder="'-' 없이 숫자만 입력" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="order_check_join">
+                    <button type="submit" class="order_check_btn">주문조회</button>
+                    <a href="#" class="join_btn">신규 회원가입</a>
+                </div>
+                <p>주문번호를 잊어버리신 경우 고객센터 <a href="#">02-333-6525</a> 로 문의하여 주시기 바랍니다.</p>
             </form>
         </div>
     </main>

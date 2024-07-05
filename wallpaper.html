@@ -5,14 +5,265 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRANHAND. 그랑핸드</title>
+    <title>Wallpaper | GRANHAND. 그랑핸드</title>
+    <!-- 웹폰트 연결 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/wallpaper.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS 연결 -->
-    <script src="./script/script.js" defer></script>
+    <script src="./script/common.js" defer></script>
 </head>
 <body>
+    <!--===== header =====-->
+    <header>
+        <h1 class="logo"><a href="./index.html"><img src="./images/granhand_logo.png" alt="그랑핸드"></a></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="./shop.html">Shop</a>
+                    <ul class="sub">
+                        <li>Gift Set</li>
+                        <li>Perfume</li>
+                        <li>Home Fragrance</li>
+                        <li>Body</li>
+                        <li>Natural</li>
+                        <li>Tools</li>
+                        <li>Komfortabel Coffee</li>
+                    </ul>
+                </li>
+                <li><a href="./store.html">Store</a>
+                    <ul class="sub">
+                        <li>GRANHAND.</li>
+                        <li>Komfortabel COFFEE.</li>
+                    </ul>
+                </li>
+                <li><a href="./journal.html">Journal</a>
+                    <ul class="sub">
+                        <li>All</li>
+                        <li>News</li>
+                        <li>Culture</li>
+                        <li>Life</li>
+                        <li>Team</li>
+                        <li>Essay</li>
+                        <li>Film</li>
+                    </ul>
+                </li>
+                <li><a href="./wallpaper.html">Wallpaper</a></li>
+            </ul>
+        </nav>
+        <!-- 검색창 -->
+        <div class="search_container">
+            <a href="#" class="close"><img src="./images/close_icn.svg" alt=""></a>
+            <h1><img src="./images/granhand_logo.png" alt="그랑핸드"></h1>
+            <form action="#" method="get" id="search_frm">
+                <fieldset class='search_wrap'>
+                    <legend class="skip">검색 양식</legend>
+                    <input type="text" name="scent_name" placeholder="나를 위한 향을 찾아보세요.">
+                </fieldset>
+            </form>
+            <div class="swiper rec-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide recommend_1">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들1</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="swiper-slide recommend_2">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들2</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="swiper-slide recommend_3">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들3</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="swiper-slide recommend_4">
+                        <section class="rec_wrap">
+                            <h2>Modle.  모들4</h2>
+                            <div class="hashtag">
+                                <a href="#"># Bergamot</a>
+                                <a href="#"># Juniper</a>
+                                <a href="#"># Grapefruit</a>
+                                <a href="#"># Mint</a>
+                                <a href="#"># Patchouli</a>
+                                <a href="#"># Neroli</a>
+                                <a href="#"># Frankincense</a>
+                            </div>
+                            <p>
+                                이른 아침부터 한바탕 비에 젖은 공원은 갑자기 나타난 햇살로 숨죽이며 반짝거린다. 한 달에 하루, 이곳에서 함께한 그 사람과의 인연은 그리 길지 못했지만, 이제는 그것과는 상관없이 정해진 날짜에 여기에 오는 것이 나만의 작은 취미가 되었다. 정자에 앉아 바라본 공원은 저 멀리 강 맞은편의 높은 빌딩 숲으로 물러난 비구름과 대비되어 아침인지 노란 해 질 녘인지 분간하기 어렵다.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="lnb">
+            <a href="#" class="search"><img src="./images/search_icn.svg" alt=""></a>
+            <a href="./cart.html" class="cart"><img src="./images/bag_icn.svg" alt=""></a>
+            <a href="./login.html" class="login"><img src="./images/mypage_icn.svg" alt=""></a>
+            <a href="#" class="lang"><img src="./images/language_icn.svg" alt=""></a>
+            <!-- 언어 선택 div -->
+            <div class="lang_opt">
+                <a href="#">한국어</a>
+                <a href="#">English</a>
+            </div>
+            <!-- mobile side nav -->
+            <div class="m_nav">
+                <a href="#" class="all_nav"><img src="./images/hamburger_icn.svg" alt="#"></a>
+                <!-- 모바일 내비 제작 위치 -->
+            </div>
+        </div>
+    </header>
+    <!--===== main =====-->
+    <main>
+        <div class="wallpaper">
+            <h1 class="title">Wallpaper</h1>
+            <p>그랑핸드의 사진 속에 스며들어, 우리의 감성을 당신의 배경에 담아보세요.</p>
+            <div class="wp_container">
+                <a href="#" class="wp_contents wp_1">
+                    <p><img src="./images/w_001.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>Scatter, 2023</h2>
+                        <p>조회 1460</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_2">
+                    <p><img src="./images/w_002.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>Instant Moment, 2022</h2>
+                        <p>조회 2817</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_3">
+                    <p><img src="./images/w_003.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>COCOCAY. & EPEUL., 2023</h2>
+                        <p>조회 1377</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_4">
+                    <p><img src="./images/w_004.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>Better Than Sweet, 2023</h2>
+                        <p>조회 1533</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_5">
+                    <p><img src="./images/w_005.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>Spring, 2022</h2>
+                        <p>조회 1274</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_6">
+                    <p><img src="./images/w_006.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>상기 Presentment, 2022</h2>
+                        <p>조회 1814</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_7">
+                    <p><img src="./images/w_007.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>My Amaranth, 2020</h2>
+                        <p>조회 2455</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_8">
+                    <p><img src="./images/w_008.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>Dark Afternoon, 2020</h2>
+                        <p>조회 1639</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_9">
+                    <p><img src="./images/w_009.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>Fruits On The Plate, 2020</h2>
+                        <p>조회 1306</p>
+                    </div>
+                </a>
+                <a href="#" class="wp_contents wp_10">
+                    <p><img src="./images/w_010.jpg" alt=""></p>
+                    <div class="text">
+                        <h2>'SUSIE SALMON' Ring, 2022</h2>
+                        <p>조회 1673</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!--===== footer =====-->
+    <footer>
+        <div class="footer_wrap">
+            <div class="top">
+                <div class="slogan">
+                    <h2>Sometimes you win,<br>Sometimes you learn.</h2>
+                    <p>향은 보이지도, 잡히지도 않지만, 우리에게 수많은 기억과 감정을 각인시키고, 나아가 우리 삶 속에서 많은 부분을 결정합니다.<br>그랑핸드는 이러한 향의 가치를 믿으며, 이들 매개로 한 끊임없는 시도를 통해 향의 일상화를 꿈꿉니다. 그랑핸드는 쉽게 소비되고<br>잊혀질 무언가가 아닌, 보이지 않는 곳에서 뚜렷한 존재감으로 모든 사람들에게 우리의 마음과 온기를 전하고 싶습니다.</p>
+                </div>
+                <div class="link">
+                    <a href="#"><img src="./images/instagram.svg" alt="인스타그램"></a>
+                    <a href="#"><img src="./images/youtube.svg" alt="유튜브"></a>
+                </div>
+            </div>
+            <div class="btm">
+                <p><em>대표</em>정준혁</p>
+                <p><em>상호</em>(유)그랑핸드</p>
+                <p><em>사업자번호</em>127-88-01898</p>
+                <p><em>통신판매업</em>2020-서울종로-0623</p>
+                <p><em>주소</em>서울시 종로구 자하문로4길 14-2</p>
+                <p><em>메일</em>hello@granhand.com</p>
+                <a href="#">이용약관</a>
+                <p><em>개인정보관리책임자</em>정루아</p>
+                <a href="#">개인정보처리방침</a>
+                <p><em>호스팅</em>(주)아임웹</p>
+            </div>
+        </div>
+    </footer>
 </body>
-</html>
