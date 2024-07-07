@@ -1,5 +1,122 @@
 /* store header 디자인 수정 */
 header .logo a img, header .lnb > a {filter:invert(0);}
 header nav .gnb > li > a {color:#282828;}
-header nav .gnb > li:nth-child(2) > a::after {width:100%;}
 header nav .gnb > li > a::after {background-color:#282828;}
+/* 회원 정보 작성페이지 초기값 숨기기 */
+/* main .user_info {display:none;} */
+main .agreement {display:none;}
+/* ----- main-agreement ----- */
+main .agreement {max-width:1180px; margin:0 auto; padding-top:230px;}
+main .user_info {max-width:690px; margin:0 auto; padding-top:230px;}
+main h1 {font-size:1.5rem; font-weight:700; text-align:center;}
+/* 가입 순서 디자인 */
+main .procedure {display:flex; justify-content:center; align-items:center; margin:16px 0 90px;}
+main .procedure > span {margin-left:6px;}
+main .procedure .circle {
+    width:10px; height:10px; border-radius:50%; background-color:#D9D9D9;
+}
+main .procedure .line {
+    width:16px; height:1px; background-color:#D9D9D9;
+}
+main .procedure > span:first-child {background-color:#485131; margin-left:0;}
+/* 약관동의 form */
+main #agreement_frm {}
+main #agreement_frm .user_agree {}
+main #agreement_frm .user_agree .agree_check {}
+main #agreement_frm .user_agree .agree_check li {
+    display:flex; flex-flow:column nowrap; align-items:flex-start;
+}
+main #agreement_frm .user_agree .agree_check li input[name=agree] {
+    display:none;
+}
+/* checkbox 초기값 */
+main #agreement_frm .user_agree .agree_check li label[for*=agree] {
+    background-image:url(../images/unchecked.svg);
+    background-repeat:no-repeat;
+    padding-left:36px; height:24px; width:100%;
+    display:inline-flex; align-items:center;
+}
+/* checkbox 활성화 시 */
+main #agreement_frm .user_agree .agree_check li input[name=agree]:checked+label {
+    background-image:url(../images/checked.svg);
+}
+main #agreement_frm .user_agree .agree_check li label[for*=agree] em {color:#FF0000; margin-left:6px;}
+/* 동의 간 간격 조정 */
+main #agreement_frm .user_agree .agree_check li {margin-top:36px;}
+main #agreement_frm .user_agree .agree_check li:first-child,
+main #agreement_frm .user_agree .agree_check li:nth-child(2) {margin-top:0;}
+/* 전체 동의 하단 라인 디자인 */
+main #agreement_frm .user_agree .agree_check li:first-child {
+    padding-bottom:16px; border-bottom:1px solid #5F5F5F;
+    margin-bottom:16px; margin-top:0;
+}
+main #agreement_frm .user_agree .agree_check li > span {
+    border:1px solid #e0e0e0; background-color:#fff;
+    height:250px; overflow:auto; padding:20px;
+    font-size:0.875rem; line-height:1.5; margin-top:12px;
+}
+main #agreement_frm .user_agree .agree_check li:nth-child(4) > span {height:max-content; width:100%;}
+main #agreement_frm .btn {
+    display:flex; justify-content:center; align-items:center;
+    margin:90px 0;
+}
+main #agreement_frm .btn button {width:406px; font-weight:700; border:0; line-height:45px; margin-right:16px;}
+main #agreement_frm .btn .back_btn {background-color:#fff; border:1px solid #959595;}
+main #agreement_frm .btn > .join_btn {color:#fff; background-color:#959595;}
+
+/* ----- main-user_info ----- */
+main .user_info {text-align:center;}
+main .user_info .profile {position:relative; display:inline-block; margin-bottom:46px;}
+main .user_info .profile > a {
+    position:absolute; right:0; bottom:0;
+    border:1px solid #e0e0e0; background-color:#fff; width:38px; height:38px; border-radius:50%;
+    display:flex; justify-content:center; align-items:center;
+}
+main .user_info .user_info_wrap {text-align:left;}
+main .user_info .user_info_wrap .info_write {}
+main .user_info .user_info_wrap .info_write dt {font-weight:500; margin-bottom:10px;}
+main .user_info .user_info_wrap .info_write dt em {color:#FF0000; margin-left:6px;}
+main .user_info .user_info_wrap .info_write dd {margin-bottom:24px;}
+main .user_info .user_info_wrap .info_write dd .phone_authentication {
+    line-height:49px; padding:0 24px; background-color:#959595; border:0; color:#fff;
+    transition:background-color 0.3s;
+}
+main .user_info .user_info_wrap .info_write dd .phone_authentication:hover {
+    background-color:#848484;
+}
+/* 입력칸 공통 디자인 */
+main .user_info .user_info_wrap .info_write dd input,
+main .user_info .user_info_wrap .info_write dd select[name^=email] {
+    line-height:49px; padding:0 16px; font-size:0.875rem;
+    outline:0; width:100%; border:1px solid #E0E0E0;
+}
+main .user_info .user_info_wrap .info_write dd input::placeholder {font-size:0.875rem; color:#959595;}
+/* input-email */
+main .user_info .user_info_wrap .info_write dd:nth-child(4) {
+    display:flex; justify-content:space-between; align-items:center;
+}
+main .user_info .user_info_wrap .info_write dd input[name*=mail] {
+    width:calc((100% - 32px) / 2);
+}
+main .user_info .user_info_wrap .info_write dd select[name^=email] {
+    width:calc((100% - 32px) / 2); height:49px;
+    appearance:none; background-repeat:no-repeat;
+    background-image:url(../images/arrow_drop_down_icn.svg);
+    background-position:right;
+}
+main .user_info .user_info_wrap .info_write dd select[name^=email] > option {
+    color:#959595;
+}
+main .user_info .user_info_wrap .info_write dd:last-child {margin-bottom:0;}
+main .user_info .user_info_wrap .info_write dd:last-child .address_search {display:flex; justify-content:space-between; align-items:center;}
+main .user_info .user_info_wrap .info_write dd:last-child .address_search input[name^=user] {
+    width:calc(100% - 135px); margin-bottom:0;
+}
+main .user_info .user_info_wrap .info_write dd:last-child .address_search .search {width:125px; line-height:49px; border:0; background-color:#959595; color:#fff; margin-bottom:0;}
+main .user_info .user_info_wrap .info_write dd:last-child * {margin-bottom:10px;}
+main .user_info .user_info_wrap .info_write dd:last-child input:last-child {margin-bottom:0;}
+main .user_info .btn {margin:90px 0;}
+main .user_info .btn > .join_btn {
+    line-height:49px; font-weight:700; color:#fff; background-color:#959595;
+    width:100%; border:0;
+}
