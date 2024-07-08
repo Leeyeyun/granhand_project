@@ -1,0 +1,17 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4_2)">
+<rect x="11" width="8" height="96" rx="4" fill="#FDFBF4"/>
+<rect x="33" width="8" height="96" rx="4" fill="#FDFBF4"/>
+<rect x="55" width="8" height="96" rx="4" fill="#FDFBF4"/>
+<rect x="77" width="8" height="96" rx="4" fill="#FDFBF4"/>
+<rect x="96" y="11" width="8" height="96" rx="4" transform="rotate(90 96 11)" fill="#FDFBF4"/>
+<rect x="96" y="33" width="8" height="96" rx="4" transform="rotate(90 96 33)" fill="#FDFBF4"/>
+<rect x="96" y="55" width="8" height="96" rx="4" transform="rotate(90 96 55)" fill="#FDFBF4"/>
+<rect x="96" y="77" width="8" height="96" rx="4" transform="rotate(90 96 77)" fill="#FDFBF4"/>
+</g>
+<defs>
+<clipPath id="clip0_4_2">
+<rect width="96" height="96" fill="white"/>
+</clipPath>
+</defs>
+</svg>
