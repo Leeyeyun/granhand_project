@@ -1,11 +1,12 @@
 /* store header 디자인 수정 */
+header {position:sticky; height:134px;}
 header .logo a img, header .lnb > a {filter:invert(0);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li:nth-child(2) > a::after {width:100%;}
 header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
 main .store {max-width:1640px; margin:0 auto;}
-main .store .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:224px;}
+main .store .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
 main .store > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
 /* 스토어 카테고리 디자인 */
 main .store .store_type {

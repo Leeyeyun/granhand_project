@@ -1,11 +1,12 @@
 /* wallpaper header 디자인 수정 */
+header {position:sticky; height:134px;}
 header .logo a img, header .lnb > a {filter:invert(0);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li:last-child > a::after {width:100%;}
 header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
 main .wallpaper {max-width:1640px; margin:0 auto; position:relative;}
-main .wallpaper .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:224px;}
+main .wallpaper .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
 main .wallpaper > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
 /* 배경화면 이미지 모음 */
 main .wallpaper .wp_container {

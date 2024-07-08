@@ -1,13 +1,14 @@
 /* store header 디자인 수정 */
+header {position:sticky; height:134px;}
 header .logo a img, header .lnb > a {filter:invert(0);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li > a::after {background-color:#282828;}
 /* 회원 정보 작성페이지 초기값 숨기기 */
-main .user_info {display:none;}
+/* main .user_info {display:none;} */
 /* main .agreement {display:none;} */
 /* ----- main-agreement ----- */
-main .agreement {max-width:1180px; margin:0 auto; padding-top:230px;}
-main .user_info {max-width:690px; margin:0 auto; padding-top:230px;}
+main .agreement {max-width:1180px; margin:0 auto; padding-top:96px;}
+main .user_info {max-width:690px; margin:0 auto; padding-top:96px;}
 main h1 {font-size:1.5rem; font-weight:700; text-align:center;}
 /* 가입 순서 디자인 */
 main .procedure {display:flex; justify-content:center; align-items:center; margin:16px 0 90px;}
@@ -36,6 +37,9 @@ main #agreement_frm .user_agree .agree_check li label[for*=agree] {
     background-repeat:no-repeat;
     padding-left:36px; height:24px; width:100%;
     display:inline-flex; align-items:center;
+}
+main #agreement_frm .user_agree .agree_check li label[for*=agree].active {
+    background-image:url(../images/checked.svg);
 }
 /* checkbox 활성화 시 */
 main #agreement_frm .user_agree .agree_check li input[name=agree]:checked+label {

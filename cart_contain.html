@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/cart_contain.css">
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -20,7 +20,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JS 연결 -->
-    <script src="./script/login.js" defer></script>
     <script src="./script/common.js" defer></script>
 </head>
 <body>
@@ -163,59 +162,81 @@
     </header>
     <!--===== main =====-->
     <main>
-        <div class="login">
-            <h2>LOGIN</h2>
-            <p>나만의 분위기를 나타낼 수 있는 향을 그랑핸드에서 찾아보세요.</p>
-            <div class="member_option">
-                <a href="#">회원</a>
-                <a href="#">비회원 주문조회</a>
+        <div class="cart">
+            <div class="title">
+                <div class="left">
+                    <h1>Cart</h1>
+                    <p>*배송은 2-5일 정도 소요되며 택배사의 상황에 따라 지연될 수 있습니다. Blotter Card는 우편 발송으로 영업일 기준 5일 이상 소요됩니다.</p>
+                </div>
+                <a href="./shop.html" class="shop_continue">쇼핑 계속하기</a>
             </div>
-            <!-- 회원 -->
-            <form action="#" method="get" id="member_login_frm">
-                <fieldset class="login_wrap">
-                    <legend class="skip">회원 로그인양식</legend>
-                    <div class="id_pw">
-                        <input type="text" name="user_id" id="user_id" placeholder="이메일" required>
-                        <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호" required>
+            <div class="cart_list">
+                <ul class="info">
+                    <li>
+                        <input type="checkbox" name="all_select" id="all_select">
+                        <span>상품 정보</span>
+                        <input type="checkbox" name="hide" id="hide">
+                    </li>
+                    <li>수량</li>
+                    <li>주문금액</li>
+                    <li>배송 정보</li>
+                </ul>
+                <div class="cart_contents">
+                    <div class="none">
+                        <p>장바구니가 비어있습니다.</p>
+                        <a href="./shop.html" class="shop_continue">쇼핑 계속하기</a>
                     </div>
-                    <div class="login_keep_find">
-                        <div class="login_keep">
-                            <input type="checkbox" name="keep" value="keep_yes" id="keep_yes">
-                            <label for="keep_yes"><span>로그인 상태 유지</span></label>
-                        </div>
-                        <div class="login_find">
-                            <a href="#">아이디 찾기</a>
-                            <a href="#">비밀번호 찾기</a>
-                        </div>
-                    </div>
-                </fieldset>
-                <div class="join_login">
-                    <button type="button" class="login_btn">로그인</button>
-                    <a href="./agreement.html" class="join_btn">회원가입</a>
-                    <button type="button" class="kakao_btn">카카오로 시작하기</button>
+                    <ul class="cart_item">
+                        <li class="product_info">
+                            <div class="product_select">
+                                <p><input type="checkbox" name="select" value="product_select" id="product_select"></p>
+                                <a href="/shop.html" class="item_wrap">
+                                    <p><img src="./images/p_001.jpg" alt=""></p>
+                                    <div class="product_name">
+                                        <h2>Soie Signature Perfume<span>수아 시그니처 퍼퓸</span></h2>
+                                        <p>50ml</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="#"><img src="./images/close_icn.svg" alt="상품 삭제하기"></a>
+                        </li>
+                        <li class="product_num">
+                            <span>1</span>
+                            <button type="button" class="num_change">옵션 / 수량 변경</button>
+                        </li>
+                        <li class="product_price">
+                            <span>110,000 KRW</span>
+                            <button type="button" class="num_change">바로 구매</button>
+                        </li>
+                        <li class="deliver_info">
+                            <p>무료</p>
+                            <p>택배</p>
+                        </li>
+                    </ul>
                 </div>
-            </form>
-            <!-- 비회원 -->
-            <form action="#" method="get" id="nonmember_login_frm">
-                <fieldset class="login_wrap">
-                    <legend class="skip">비회원 로그인양식</legend>
-                    <div class="order_phone">
-                        <div class="order">
-                            <p>주문 번호</p>
-                            <input type="text" name="user_order" id="user_order" placeholder="18자리 주문번호 입력" required>
-                        </div>
-                        <div class="phone">
-                            <p>휴대폰 번호</p>
-                            <input type="text" name="user_phone" id="user_phone" placeholder="'-' 없이 숫자만 입력" required>
-                        </div>
-                    </div>
-                </fieldset>
-                <div class="order_check_join">
-                    <button type="submit" class="order_check_btn">주문조회</button>
-                    <a href="./agreement.html" class="join_btn">신규 회원가입</a>
+                <div class="btn">
+                    <button type="button" class="select_d_btn">선택 상품 삭제</button>
+                    <button type="button" class="soldout_d_btn">품절 상품 삭제</button>
                 </div>
-                <p>주문번호를 잊어버리신 경우 고객센터 <a href="#">02-333-6525</a> 로 문의하여 주시기 바랍니다.</p>
-            </form>
+            </div>
+            <ul class="total">
+                <li class="product_price">
+                    <h3>상품금액</h3>
+                    <p><span class="total_num">110,000</span> KRW</p>
+                </li>
+                <li class="deliver_fee">
+                    <h3>배송비</h3>
+                    <p>+ <span class="total_num">0</span> KRW</p>
+                </li>
+                <li class="total_price">
+                    <h3>총 주문금액</h3>
+                    <p>= <span class="total_num">110,000</span> KRW</p>
+                </li>
+                <li class="order_btn">
+                    <button type="button">주문하기</button>
+                    <button type="button"><img src="./images/npay.svg" alt="">구매하기</button>
+                </li>
+            </ul>
         </div>
     </main>
     <!--===== footer =====-->
