@@ -1,0 +1,36 @@
+/* ------------------- width 1640px ------------------- */
+@media screen and (max-width:1640px){
+    main .shop .shop_wrap,
+    main .store .store_wrap .store-slide .swiper-slide .bg,
+    main .store .store_wrap {padding:0 70px;}
+}
+@media screen and (max-width:1200px){
+    header nav, header .lnb .lang {display:none;}
+    header .lnb .m_nav {display:block;}
+    header .logo {left:20px;}
+    header .lnb {right:20px;}
+    /* main-brand font 크기 */
+    main .brand .brand_wrap .brand_txt h2 {font-size:1.875rem;}
+    main .brand .brand_wrap .brand_txt p {font-size:0.875rem;}
+    main .shop .shop_wrap,
+    main .store .store_wrap .store-slide .swiper-slide .bg,
+    main .store .store_wrap {padding:0 20px;}
+    main .store .store_wrap .store-slide .swiper-button-prev {left:160px; width:80px; height:80px;}
+    main .store .store_wrap .store-slide .swiper-button-next {right:160px; width:80px; height:80px;}
+}
+@media screen and (max-width:1060px){
+    /* main-brand 이미지&텍스트 배치 변경 */
+    main .brand .brand_wrap {flex-flow:column nowrap; justify-content:flex-start;}
+    main .brand .brand_wrap .img {height:50vh; width:100vw; overflow:hidden; display:flex; justify-content:center; align-items:center;}
+    main .brand .brand_wrap .img img {height:auto; width:100%;}
+    main .brand .brand_wrap .brand_txt {width:100%; height:50vh; display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;}
+    main .brand .brand_wrap .brand_txt h2 {margin-bottom:30px;}
+}
+
+@media screen and (max-width:760px){
+    header .logo a img {width:80%;}
+    header .lnb {top:48px;}
+    header .lnb a {margin-right:16px;}
+    header .lnb img {width:80%;}
+    header .lnb .m_nav a img {width:24px; height:24px;}
+}

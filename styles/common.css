@@ -3,7 +3,7 @@ body {background-color:#FDFBF4}
 header {width:100vw; position:fixed; z-index:999; padding:40px 70px;}
 header .logo {position:absolute; left:70px; top:40px;}
 header .logo a {}
-header .logo a img {filter:invert(1);}
+header .logo a img {filter:invert(1); width:100%;}
 /* header-nav */
 header nav {text-align:center;}
 header nav .gnb {
@@ -30,6 +30,7 @@ header nav .gnb > li > a.active::after {
     background-color:#282828; /* 변경된 배경색 */
 }
 header .lnb > a.invert {filter:invert(0);}
+header .lnb .m_nav a img.invert {filter:invert(1);}
 header .logo > a > img.invert {filter:invert(0);}
 /* 언어 선택 양식 */
 header .lnb .lang::after {

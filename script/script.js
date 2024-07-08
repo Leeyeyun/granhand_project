@@ -1,21 +1,21 @@
 const swiper1 = new Swiper('.shop-slide',{
     effect:'',
     /* autoplay:{}, */
-    slidesPerView:3,
-    /* spaceBetween:60, //위 slidesPerview 여백 */
+    slidesPerView:4,
+    //spaceBetween:60, //위 slidesPerview 여백
     scrollbar: {
         el:'.swiper-scrollbar',
         draggable:true,
         hide:false,
     },
-    breakpoints: { //반응형 조건 속성
+    /* breakpoints: {
     1200: {slidesPerView:3},
-    },
+    }, */
 });
 
 const swiper2 = new Swiper('.store-slide',{
     effect:'',
-    autoplay:{},
+    /* autoplay:{}, */
     loop:true,
     slidesPerView:1,
     navigation:{
@@ -45,20 +45,22 @@ $('#fullpage').fullpage({
         //현재 스크롤 위치 인식
         console.log(index, nextIndex, direction);
         // "down" 방향일 때 조건
-        if (direction == 'down' && (index == 1 || index == 3 || index == 5 || index == 6)) {
+        if (direction == 'down' && (index == 1 || index == 2 || index == 4 || index == 5)) {
             console.log(index);
             $('nav .gnb > li > a').css('color', '#282828');
             $('nav .gnb > li > a').addClass('active');
             $('header .lnb > a').addClass('invert');
             $('header .logo > a > img').addClass('invert');
+            $('header .m_nav > a > img').addClass('invert');
         }
         // "up" 방향일 때 조건
-        else if (direction == 'up' && (index == 7 || index == 5 || index == 4)) {
+        else if (direction == 'up' && (index == 6 || index == 4 || index == 3)) {
             console.log(index);
             $('nav .gnb > li > a').css('color', '#282828');
             $('nav .gnb > li > a').addClass('active');
             $('header .lnb > a').addClass('invert');
             $('header .logo > a > img').addClass('invert');
+            $('header .m_nav > a > img').addClass('invert');
         }
         // 그 외의 경우
         else {
@@ -67,6 +69,7 @@ $('#fullpage').fullpage({
             $('nav .gnb > li > a').removeClass('active');
             $('header .lnb > a').removeClass('invert');
             $('header .logo > a > img').removeClass('invert');
+            $('header .m_nav > a > img').removeClass('invert');
         }
     },
 })
