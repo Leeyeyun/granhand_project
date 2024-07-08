@@ -16,7 +16,6 @@ const swiper4 = new Swiper('.rec-slide',{
 const search_icn = document.querySelector('header .lnb > .search')
 const search_container = document.querySelector('header .search_container')
 const close = document.querySelector('header .search_container .close')
-console.log(search_icn, search_container, close)
 /* 검색창 초기값 */
 search_container.style.transform = 'translateY(-100vh)'
 search_icn.addEventListener('click',(e)=>{
