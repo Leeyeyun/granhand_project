@@ -2,7 +2,9 @@
 @media screen and (max-width:1640px){
     main .shop .shop_wrap,
     main .store .store_wrap .store-slide .swiper-slide .bg,
-    main .store .store_wrap {padding:0 70px;}
+    main .store .store_wrap, main .journal .journal_wrap {padding:0 70px;}
+    main .journal .journal_wrap .journal_contents .j_main {width:40%;}
+    main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%;}
 }
 @media screen and (max-width:1200px){
     header nav, header .lnb .lang {display:none;}
@@ -14,7 +16,7 @@
     main .brand .brand_wrap .brand_txt p {font-size:0.875rem;}
     main .shop .shop_wrap,
     main .store .store_wrap .store-slide .swiper-slide .bg,
-    main .store .store_wrap {padding:0 20px;}
+    main .store .store_wrap, main .journal .journal_wrap {padding:0 20px;}
     main .store .store_wrap .store-slide .swiper-button-prev {left:160px; width:80px; height:80px;}
     main .store .store_wrap .store-slide .swiper-button-next {right:160px; width:80px; height:80px;}
 }
@@ -25,6 +27,13 @@
     main .brand .brand_wrap .img img {height:auto; width:100%;}
     main .brand .brand_wrap .brand_txt {width:100%; height:50vh; display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;}
     main .brand .brand_wrap .brand_txt h2 {margin-bottom:30px;}
+    main .journal {height:max-content !important;}
+    main .journal .journal_wrap {height:max-content; overflow:visible; padding-top:170px;}
+    main .sub_link {margin-top:0;}
+    main .journal .journal_wrap .journal_contents {flex-flow:column nowrap; align-items:center;}
+    main .journal .journal_wrap .journal_contents .j_main {width:100%;}
+    main .journal .journal_wrap .journal_contents .sub-journal-slide {width:100%;}
+    main .journal .journal_wrap .journal_contents .j_main > a::after {bottom:73px;}
 }
 
 @media screen and (max-width:760px){

@@ -152,7 +152,7 @@ main .store .store_wrap .store-slide .swiper-button-next {
     transition:opacity 0.3s;
 }
 /*------------------ 5. journal ------------------*/
-main .journal .journal_wrap {padding:0 140px;}
+main .journal .journal_wrap {max-width:1640px; margin:0 auto;}
 main .journal .journal_wrap .sub_link {border:0;}
 main .journal .journal_wrap .journal_contents {display:flex; justify-content:space-between; align-items:center;}
 /* journal-왼쪽 */
