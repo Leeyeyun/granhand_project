@@ -33,4 +33,5 @@
     header .lnb a {margin-right:16px;}
     header .lnb img {width:80%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
+    main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_contents {width:100%;}
 }

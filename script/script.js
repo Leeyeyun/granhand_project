@@ -1,17 +1,26 @@
-const swiper1 = new Swiper('.shop-slide',{
-    effect:'',
+const swiper1 = new Swiper('.shop-slide', {
+    effect: '',
     /* autoplay:{}, */
-    slidesPerView:4,
-    //spaceBetween:60, //위 slidesPerview 여백
+    slidesPerView:1,
     scrollbar: {
-        el:'.swiper-scrollbar',
-        draggable:true,
-        hide:false,
+        el: '.swiper-scrollbar',
+        draggable: true,
+        hide: false,
     },
-    /* breakpoints: {
-    1200: {slidesPerView:3},
-    }, */
+    breakpoints: {
+        1640:{//1640px 이상인 경우
+            slidesPerView:4,
+        },
+        1200:{//760px 이상인 경우
+            slidesPerView:3,
+        },
+        760:{//760px 이상인 경우
+            slidesPerView:2,
+            spaceBetween: 16,
+        },
+    },
 });
+
 
 const swiper2 = new Swiper('.store-slide',{
     effect:'',
