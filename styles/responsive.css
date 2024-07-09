@@ -5,6 +5,7 @@
     main .store .store_wrap, main .journal .journal_wrap {padding:0 70px;}
     main .journal .journal_wrap .journal_contents .j_main {width:40%;}
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%;}
+    main .footer {padding:0 70px;}
 }
 @media screen and (max-width:1200px){
     header nav, header .lnb .lang {display:none;}
@@ -19,6 +20,11 @@
     main .store .store_wrap, main .journal .journal_wrap {padding:0 20px;}
     main .store .store_wrap .store-slide .swiper-button-prev {left:160px; width:80px; height:80px;}
     main .store .store_wrap .store-slide .swiper-button-next {right:160px; width:80px; height:80px;}
+    main .footer .btm {flex-flow:row wrap; justify-content:flex-start;}
+    main .footer .btm > * {margin-bottom:16px;}
+    main .footer .footer_wrap .top p br {display:none;}
+    main .footer .footer_wrap .top {flex-flow:column-reverse nowrap; justify-content:flex-start;}
+    main .footer .top .link {margin-bottom:16px;}
 }
 @media screen and (max-width:1060px){
     /* main-brand 이미지&텍스트 배치 변경 */
@@ -27,13 +33,16 @@
     main .brand .brand_wrap .img img {height:auto; width:100%;}
     main .brand .brand_wrap .brand_txt {width:100%; height:50vh; display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;}
     main .brand .brand_wrap .brand_txt h2 {margin-bottom:30px;}
-    main .journal {height:max-content !important;}
-    main .journal .journal_wrap {height:max-content; overflow:visible; padding-top:170px;}
-    main .sub_link {margin-top:0;}
+    main .store .store_wrap .store-slide .swiper-slide {background-size:cover;}
+    main .store .store_wrap .store-slide .swiper-slide:hover {background-size:cover;}
+    main .journal {height:1350px !important;}
+    main .journal .journal_wrap {height:max-content; overflow:visible;}
     main .journal .journal_wrap .journal_contents {flex-flow:column nowrap; align-items:center;}
     main .journal .journal_wrap .journal_contents .j_main {width:100%;}
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:100%;}
-    main .journal .journal_wrap .journal_contents .j_main > a::after {bottom:73px;}
+    main .journal .journal_wrap .journal_contents .j_main > a::after {bottom:58px;}
+    main .journal .journal_wrap .sub_link a {margin-top:0; padding-top:100px;}
+    main .footer {height:310px !important;}
 }
 
 @media screen and (max-width:760px){
@@ -43,4 +52,10 @@
     header .lnb img {width:80%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
     main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_contents {width:100%;}
+    main .journal .journal_wrap .journal_contents .j_main .view.view_on {bottom:90px;}
+    main .journal .journal_wrap .sub_link a {padding-top:110px; line-height:0; font-size:1.25rem;}
+    main .footer {height:480px !important;}
+}
+@media screen and (max-width:500px){
+    main .journal .journal_wrap .journal_contents .j_main > a::after {bottom:73px;}
 }
