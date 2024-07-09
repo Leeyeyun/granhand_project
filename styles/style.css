@@ -16,10 +16,9 @@ main .title::after {
 main .title.arrow::after {margin-left:16px; opacity:1;}
 /*------------------ 1. first ------------------*/
 main .first .first_wrap {
-    position:relative; height:100vh;
+    position:relative;
     display:flex; align-items:center; justify-content:center;
 }
-main .first .first_wrap video {height:100%;}
 
 /* mouse 스크롤다운 아이콘 디자인 */
 main #fullpage .first .first_wrap .mouse_wrap {
@@ -48,7 +47,7 @@ main .first .first_wrap .mouse_wrap div .trei {margin-bottom:0; animation:opa 1.
 main .brand {}
 main .brand .brand_wrap {
     display:flex; align-items:center; justify-content:space-between;
-    max-width:1640px; margin:0 auto; height:100vh;
+    max-width:1640px; margin:0 auto;
 }
 main .brand .brand_wrap .img {height:100vh;}
 main .brand .brand_wrap .img img {height:100%;}
@@ -59,7 +58,7 @@ main .brand .brand_wrap .brand_txt h2 {
 main #fullpage .brand .brand_wrap .brand_txt p {letter-spacing:-0.2px; line-height:2.0;}
 /*------------------ 3. shop ------------------*/
 main .shop {}
-main .shop .shop_wrap {max-width:1640px; margin:0 auto; height:100vh;}
+main .shop .shop_wrap {max-width:1640px; margin:0 auto;}
 main .shop .shop_wrap .shop-slide {max-width:1640px; overflow:hidden;}
 main .shop .shop_wrap .shop-slide .swiper-wrapper {}
 main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide {}
@@ -82,7 +81,7 @@ main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_content
 }
 /*------------------ 4. store ------------------*/
 main .store {background-color:#0E0E0E;}
-main .store .store_wrap {max-width:1640px; margin:0 auto; height:100vh;}
+main .store .store_wrap {max-width:1640px; margin:0 auto;}
 main .store .store_wrap .sub_link {border:0;}
 main .store .store_wrap .sub_link .title {color:#fff;}
 main .store .store_wrap .title::after {
@@ -153,7 +152,7 @@ main .store .store_wrap .store-slide .swiper-button-next {
     transition:opacity 0.3s;
 }
 /*------------------ 5. journal ------------------*/
-main .journal .journal_wrap {max-width:1640px; margin:0 auto; height:100vh;}
+main .journal .journal_wrap {max-width:1640px; margin:0 auto;}
 main .journal .journal_wrap .sub_link {border:0;}
 main .journal .journal_wrap .journal_contents {display:flex; justify-content:space-between; align-items:center;}
 /* journal-왼쪽 */
