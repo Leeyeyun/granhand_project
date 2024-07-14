@@ -1,4 +1,4 @@
-body {background-color:#FDFBF4; width:100vw;}
+body {background-color:#FDFBF4;}
 /* ---------- header ---------- */
 header {width:100vw; position:fixed; z-index:999; padding:40px 70px;}
 header .logo {position:absolute; left:70px; top:40px;}

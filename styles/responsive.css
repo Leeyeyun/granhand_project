@@ -1,7 +1,6 @@
 /* ------------------- width 1640px ------------------- */
 @media screen and (max-width:1640px){
     main .shop .shop_wrap,
-    main .store .store_wrap .store-slide .swiper-slide .bg,
     main .store .store_wrap, main .journal .journal_wrap {padding:0 70px;}
     main .journal .journal_wrap .journal_contents .j_main {width:40%;}
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%;}
@@ -18,13 +17,20 @@
     main .shop .shop_wrap,
     main .store .store_wrap .store-slide .swiper-slide .bg,
     main .store .store_wrap, main .journal .journal_wrap {padding:0 20px;}
-    main .store .store_wrap .store-slide .swiper-button-prev {left:160px; width:80px; height:80px;}
-    main .store .store_wrap .store-slide .swiper-button-next {right:160px; width:80px; height:80px;}
+    main .store .store_wrap .store-slide .swiper-button-prev {width:80px; height:80px; left:36px;}
+    main .store .store_wrap .store-slide .swiper-button-next {width:80px; height:80px; right:36px;}
     main .footer .btm {flex-flow:row wrap; justify-content:flex-start;}
     main .footer .btm > * {margin-bottom:16px;}
     main .footer .footer_wrap .top p br {display:none;}
     main .footer .footer_wrap .top {flex-flow:column-reverse nowrap; justify-content:flex-start;}
     main .footer .top .link {margin-bottom:16px;}
+    main .store .store_wrap .store-slide .swiper-slide {padding:40px 18px;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .store_name {font-size:1.25rem; display:flex; flex-flow:column nowrap;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .store_name span {margin-left:0; margin-top:6px;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .btm p {font-size:0.75rem; width:57%;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .btm p br {display:none;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .btm h3 {font-size:0.875rem;}
+    main .footer {padding:0 18px;}
 }
 @media screen and (max-width:1060px){
     /* main-brand 이미지&텍스트 배치 변경 */
@@ -35,14 +41,16 @@
     main .brand .brand_wrap .brand_txt h2 {margin-bottom:30px;}
     main .store .store_wrap .store-slide .swiper-slide {background-size:cover;}
     main .store .store_wrap .store-slide .swiper-slide:hover {background-size:cover;}
-    main .journal {height:1350px !important;}
+    main .journal {}
     main .journal .journal_wrap {height:max-content; overflow:visible;}
     main .journal .journal_wrap .journal_contents {flex-flow:column nowrap; align-items:center;}
-    main .journal .journal_wrap .journal_contents .j_main {width:100%;}
+    main .journal .journal_wrap .journal_contents .j_main {width:100%; height:400px; overflow:hidden; display:flex; justify-content:center; align-items:center; margin-bottom:16px;}
+    main .journal .journal_wrap .journal_contents .j_main > a {transform:translateY(45px);}
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:100%;}
-    main .journal .journal_wrap .journal_contents .j_main > a::after {bottom:58px;}
+    main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item > a {width:auto;}
+    main .journal .journal_wrap .journal_contents .j_main > a::after {bottom:0;}
     main .journal .journal_wrap .sub_link a {margin-top:0; padding-top:100px;}
-    main .footer {height:310px !important;}
+    main .footer {height:310px !important; margin-top:90px;}
 }
 
 @media screen and (max-width:760px){
@@ -54,8 +62,13 @@
     main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_contents {width:100%;}
     main .journal .journal_wrap .journal_contents .j_main .view.view_on {bottom:90px;}
     main .journal .journal_wrap .sub_link a {padding-top:110px; line-height:0; font-size:1.25rem;}
-    main .footer {height:480px !important;}
+    main .footer {height:480px !important; margin-top:120px;}
+    main .journal .journal_wrap .journal_contents .j_main {height:320px;}
+    main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item > p {font-size:0.75rem;}
+    main .journal .journal_wrap .journal_contents .sub-journal-slide .swiper-slide .j_sub_item > p br {display:none;}
+    main .footer {margin-top:45px;}
 }
+
 @media screen and (max-width:500px){
-    main .journal .journal_wrap .journal_contents .j_main > a::after {bottom:73px;}
+    main .journal .journal_wrap .journal_contents .j_main > a::after {}
 }

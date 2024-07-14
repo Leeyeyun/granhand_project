@@ -37,7 +37,7 @@ const swiper3 = new Swiper('.sub-journal-slide',{
     effect:'',
     autoplay:false,
     slidesPerView:2,
-    spaceBetween:35,
+    spaceBetween:18,
     scrollbar: {
         el:'.swiper-scrollbar',
         draggable:true,
