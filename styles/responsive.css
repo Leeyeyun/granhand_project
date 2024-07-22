@@ -8,7 +8,7 @@
 @media screen and (max-width:1200px){
     header > nav, header > .lnb > .lang {display:none;}
     header .lnb .m_nav, header .lnb .m_nav .m_nav_lnb > nav {display:block;}
-    header nav .gnb > li .sub {display:block;}
+    header > nav .gnb > li > .sub {display:block;}
     header .logo {left:20px;}
     header .lnb {right:20px;}
     /* main-brand font 크기 */

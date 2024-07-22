@@ -53,6 +53,7 @@ all_nav.addEventListener('click',(e)=>{
     e.preventDefault();
     m_nav_wrap.style.display = 'block'
     all_nav.style.display = 'none'
+    document.body.style.overflow = 'hidden';
 })
 
 //m_nav close 버튼 클릭 시 m_nav 닫기
@@ -75,13 +76,31 @@ nav_close.addEventListener('click',(e)=>{
 //sub 초기값 : 처음 sub만 보이고 나머지 닫기
 for(let i of m_nav_sub){
     i.style.height = '0';
+    i.style.overflow = 'hidden'
+    //transition:height 0.3s;
 }
 m_nav_sub[0].style.height = '100%' //처음 sub만 보이기
 sub_close_arrow[0].style.transform = 'rotate(180deg)'
 for(let i of m_gnb_li_a){
     i.addEventListener('click',()=>{
         console.log(i.nextElementSibling)
-        
+        for(let a of sub_close_arrow){
+            a.style.transform = 'rotate(0)'
+        }
+        for(let j of m_nav_sub){
+            j.style.height = '0'
+            j.style.overflow = 'hidden'
+        }
+        i.children[0].style.transition = 'transform 0.5s'
+        i.children[0].style.transform = 'rotate(-180deg)'
+        i.nextElementSibling.style.height = '100%'
+        i.nextElementSibling.style.overflow = 'visible'
     })
 }
 
+const m_search = m_nav_lnb.children[0].children[0]
+m_search.addEventListener('click',(e)=>{
+    e.preventDefault();
+    search_container.style.transform = 'translateY(0)'
+    search_container.style.opacity = '1'
+})
