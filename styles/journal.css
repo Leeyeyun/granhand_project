@@ -1,54 +1,55 @@
 /* journal header 디자인 수정 */
 header {position:sticky; height:134px;}
 header .logo a img, header .lnb > a {filter:invert(0);}
+header .lnb .m_nav > a {filter:invert(1);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li:nth-child(3) > a::after {width:100%;}
 header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
-main .journal {max-width:1640px; margin:0 auto; position:relative;}
-main .journal .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
-main .journal > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
-main .journal h2 {font-size:1.125rem; font-weight:700; letter-spacing:0.2px; margin:49px 0 16px;}
+main .journal_container {max-width:1640px; margin:0 auto; position:relative;}
+main .journal_container .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
+main .journal_container > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
+main .journal_container h2 {font-size:1.125rem; font-weight:700; letter-spacing:0.2px; margin:49px 0 16px;}
 /* journal 스와이프 디자인 */
-main .journal .journal-slide {position:relative; z-index:150;}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents {
+main .journal_container .journal-slide {position:relative; z-index:150;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents {
     width:calc((100% - 32px) / 2); position:relative;
 }
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents > p {height:535px; overflow:hidden; display:flex; justify-content:center; align-items:center;}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents > p > img {width:100%;}
-main .journal .journal-slide .swiper-wrapper .j_2 .j_contents > p > img {width:103%;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents > p {height:535px; overflow:hidden; display:flex; justify-content:center; align-items:center;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents > p > img {width:100%;}
+main .journal_container .journal-slide .swiper-wrapper .j_2 .j_contents > p > img {width:103%;}
 /* hover했을 때 등장하는 view */
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents::after {
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents::after {
     content:''; display:inline-block; width:100%; height:0; opacity:0; transition:height 0.6s cubic-bezier(0, 0, 0.1, 1.0), opacity 0.6s cubic-bezier(0, 0, 0.1, 1.0);
     background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)); position:absolute; left:0; bottom:57px; z-index:150;
 }
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents.display::after {height:50%; opacity:1;}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .view {
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents.display::after {height:50%; opacity:1;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .view {
     display:flex; align-items:center; position:absolute; right:27px; bottom:75px;
     z-index:150; opacity:0; transition:bottom 0.4s ease-out, opacity 0.4s ease-out;
 }
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .view.view_on {bottom:80px; opacity:1;}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .view > p {color:#d9d9d9; font-size:0.875rem; font-weight:500;}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .view > p:last-child {width:18px; margin-left:8px;}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .view > p > img {width:100%; filter:invert(1);}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .text {
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .view.view_on {bottom:80px; opacity:1;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .view > p {color:#d9d9d9; font-size:0.875rem; font-weight:500;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .view > p:last-child {width:18px; margin-left:8px;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .view > p > img {width:100%; filter:invert(1);}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text {
     display:flex; justify-content:space-between; align-items:flex-start; padding:16px;
     border:1px solid #e0e0e0; border-top:0; height:78px;
 }
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .text h3 {font-weight:700;}
-main .journal .journal-slide .swiper-wrapper .swiper-slide .j_contents .text > p {font-size:0.875rem; line-height:1.7; text-align:right;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text h3 {font-weight:700;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text > p {font-size:0.875rem; line-height:1.7; text-align:right;}
 /* journal 스와이프 디자인 - prev,next,pagination */
-main .journal .journal_pagination {}
-main .journal .journal_pagination .swiper-pagination {text-align:right; top:358px;}
-main .journal .journal_pagination .swipe_arrow {}
-main .journal .journal_pagination .swipe_arrow .swiper-button-prev {
+main .journal_container .journal_pagination {}
+main .journal_container .journal_pagination .swiper-pagination {text-align:right; top:358px;}
+main .journal_container .journal_pagination .swipe_arrow {}
+main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {
     z-index:200; text-align:left; top:510px; left:-30px;
     content:''; display:inline-block;
     background-image:url(../images/circle_arrow.svg);
     width:60px; height:60px; background-repeat:no-repeat;
     color:transparent;
 }
-main .journal .journal_pagination .swipe_arrow .swiper-button-next {
+main .journal_container .journal_pagination .swipe_arrow .swiper-button-next {
     z-index:200; text-align:right; top:510px; right:-30px;
     content:''; display:inline-block;
     background-image:url(../images/circle_arrow.svg);
@@ -57,42 +58,42 @@ main .journal .journal_pagination .swipe_arrow .swiper-button-next {
     color:transparent;
 }
 /* 저널 카테고리 */
-main .journal .journal_type_search {margin:90px 0 20px; display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:200;}
-main .journal .journal_type_search .journal_category {}
-main .journal .journal_type_search .journal_category > a {font-size:1.25rem; color:#9d9d9d; margin-right:46px; transition:color 0.5s;}
-main .journal .journal_type_search .journal_category > a:hover {color:#485131;}
-main .journal .journal_type_search .journal_category > a:first-child {font-weight:700; color:#485131;}
-main .journal .journal_type_search #j_search_frm {}
-main .journal .journal_type_search #j_search_frm .j_search_wrap {}
+main .journal_container .journal_type_search {margin:90px 0 20px; display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:200;}
+main .journal_container .journal_type_search .journal_category {}
+main .journal_container .journal_type_search .journal_category > a {font-size:1.25rem; color:#9d9d9d; margin-right:46px; transition:color 0.5s;}
+main .journal_container .journal_type_search .journal_category > a:hover {color:#485131;}
+main .journal_container .journal_type_search .journal_category > a:first-child {font-weight:700; color:#485131;}
+main .journal_container .journal_type_search #j_search_frm {}
+main .journal_container .journal_type_search #j_search_frm .j_search_wrap {}
 /* 검색 form 디자인 */
-main .journal .journal_type_search #j_search_frm .j_search_wrap input[name^=journal] {
+main .journal_container .journal_type_search #j_search_frm .j_search_wrap input[name^=journal] {
     border:1px solid #e0e0e0; padding:16px; background-image:url(../images/j_search_icn.svg);
     background-repeat:no-repeat; background-position:right 16px center;
     outline:0; font-size:0.875rem; font-weight:500; color:#282828;
     width:330px;
 }
-main .journal .journal_type_search #j_search_frm .j_search_wrap input[name^=journal]::placeholder {
+main .journal_container .journal_type_search #j_search_frm .j_search_wrap input[name^=journal]::placeholder {
     color:#959595; font-size:0.875rem; font-weight:500; 
 }
 /* 저널 콘텐츠 모음 */
-main .journal .journal_container {display:flex; flex-flow:row wrap; justify-content:space-between; position:relative; z-index:200;}
-main .journal .journal_container .journal_contents {
+main .journal_container .journal_container {display:flex; flex-flow:row wrap; justify-content:space-between; position:relative; z-index:200;}
+main .journal_container .journal_container .journal_contents {
     width:calc((100% - 60px) / 3); margin-bottom:90px;
 }
-main .journal .journal_container .journal_contents > p {height:350px; overflow:hidden; display:flex; justify-content:center; align-items:center;}
-main .journal .journal_container .journal_contents > p > img {width:100%; transition:transform 0.5s;}
-main .journal .journal_container .j_002 > p > img {width:103%;}
-main .journal .journal_container .journal_contents > p > img:hover {transform:scale(1.05);}
-main .journal .journal_container .journal_contents .text {display:flex; justify-content:space-between; align-items:flex-start; margin-top:12px;}
-main .journal .journal_container .journal_contents .text h3 {font-size:0.875rem; font-weight:700;}
-main .journal .journal_container .journal_contents .text h3 span {color:#5F5F5F; margin-right:6px; font-weight:700;}
-main .journal .journal_container .journal_contents .text .date_view {display:flex; align-items:center;}
-main .journal .journal_container .journal_contents .text .date_view .date,
-main .journal .journal_container .journal_contents .text .date_view .view {font-size:0.875rem; font-weight:500; color:#9d9d9d; margin-left:10px;}
+main .journal_container .journal_container .journal_contents > p {height:350px; overflow:hidden; display:flex; justify-content:center; align-items:center;}
+main .journal_container .journal_container .journal_contents > p > img {width:100%; transition:transform 0.5s;}
+main .journal_container .journal_container .j_002 > p > img {width:103%;}
+main .journal_container .journal_container .journal_contents > p > img:hover {transform:scale(1.05);}
+main .journal_container .journal_container .journal_contents .text {display:flex; justify-content:space-between; align-items:flex-start; margin-top:12px;}
+main .journal_container .journal_container .journal_contents .text h3 {font-size:0.875rem; font-weight:700;}
+main .journal_container .journal_container .journal_contents .text h3 span {color:#5F5F5F; margin-right:6px; font-weight:700;}
+main .journal_container .journal_container .journal_contents .text .date_view {display:flex; align-items:center;}
+main .journal_container .journal_container .journal_contents .text .date_view .date,
+main .journal_container .journal_container .journal_contents .text .date_view .view {font-size:0.875rem; font-weight:500; color:#9d9d9d; margin-left:10px;}
 /* 하단 page 디자인 */
-main .journal .page {margin-bottom:90px; text-align:center; position:relative; z-index:200;}
-main .journal .page a {margin-right:18px; font-weight:500; color:#959595; padding:4px;}
-main .journal .page a:nth-child(2) {color:#000;}
-main .journal .page a:last-child {margin-right:0;}
-main .journal .page a:last-child img {transform:rotate(-180deg);}
-main .journal .page a img {position:relative; top:3px;}
+main .journal_container .page {margin-bottom:90px; text-align:center; position:relative; z-index:200;}
+main .journal_container .page a {margin-right:18px; font-weight:500; color:#959595; padding:4px;}
+main .journal_container .page a:nth-child(2) {color:#000;}
+main .journal_container .page a:last-child {margin-right:0;}
+main .journal_container .page a:last-child img {transform:rotate(-180deg);}
+main .journal_container .page a img {position:relative; top:3px;}

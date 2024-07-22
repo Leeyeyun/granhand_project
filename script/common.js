@@ -45,15 +45,24 @@ const m_nav = document.querySelector('.m_nav')
 const m_nav_wrap = document.querySelector('.m_nav_wrap')
 const m_nav_lnb = document.querySelector('.m_nav_lnb')
 const all_nav = document.querySelector('.all_nav')
+const m_nav_bg = document.querySelector('.m_nav_bg')
 
 m_nav_lnb.appendChild(nav_clone)
 
 m_nav_wrap.style.display = 'none'
+
+
+m_nav_bg.style.opacity = '0'
+m_nav_bg.style.display = 'none'
+
 all_nav.addEventListener('click',(e)=>{
     e.preventDefault();
     m_nav_wrap.style.display = 'block'
     all_nav.style.display = 'none'
     document.body.style.overflow = 'hidden';
+    m_nav_bg.style.transition = 'opacity 0.5s display 0.5s'
+    m_nav_bg.style.display = 'block'
+    m_nav_bg.style.opacity = '1'
 })
 
 //m_nav close 버튼 클릭 시 m_nav 닫기
@@ -66,21 +75,23 @@ const sub_close_arrow = m_nav_lnb.querySelectorAll('nav .gnb > li > a > img')
 for(let i of m_gnb_li_a){
     i.href = '#'
 }
+m_gnb_li_a[3].href = './wallpaper.html'
 
 nav_close.addEventListener('click',(e)=>{
     e.preventDefault();
     m_nav_wrap.style.display = 'none'
     all_nav.style.display = 'block'
+    m_nav_bg.style.display = 'none'
+    m_nav_bg.style.opacity = '0'
+    document.body.style.overflow = '';
 })
 
 //sub 초기값 : 처음 sub만 보이고 나머지 닫기
 for(let i of m_nav_sub){
     i.style.height = '0';
     i.style.overflow = 'hidden'
-    //transition:height 0.3s;
+    i.style.opacity = '0'
 }
-m_nav_sub[0].style.height = '100%' //처음 sub만 보이기
-sub_close_arrow[0].style.transform = 'rotate(180deg)'
 for(let i of m_gnb_li_a){
     i.addEventListener('click',()=>{
         console.log(i.nextElementSibling)
@@ -88,16 +99,25 @@ for(let i of m_gnb_li_a){
             a.style.transform = 'rotate(0)'
         }
         for(let j of m_nav_sub){
+            j.style.transition = 'height 0.3s, overflow 0.3s, opacity 0.3s'
             j.style.height = '0'
             j.style.overflow = 'hidden'
+            j.style.opacity = '0'
+
         }
         i.children[0].style.transition = 'transform 0.5s'
         i.children[0].style.transform = 'rotate(-180deg)'
-        i.nextElementSibling.style.height = '100%'
+        /* i.nextElementSibling.style.height = '100%' */
         i.nextElementSibling.style.overflow = 'visible'
+        i.nextElementSibling.style.opacity = '1'
+        if (i.nextElementSibling.children.length == 7){
+            i.nextElementSibling.style.height = `calc(32px * ${i.nextElementSibling.children.length} + 16px)`
+        }else {i.nextElementSibling.style.height = `calc(32px * ${i.nextElementSibling.children.length})`}
+        console.log(i.nextElementSibling.children.length)
     })
 }
 
+//모바일 search btn 클릭 시 검색창 등장
 const m_search = m_nav_lnb.children[0].children[0]
 m_search.addEventListener('click',(e)=>{
     e.preventDefault();

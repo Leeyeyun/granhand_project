@@ -1,56 +1,57 @@
 /* store header 디자인 수정 */
 header {position:sticky; height:134px;}
 header .logo a img, header .lnb > a {filter:invert(0);}
+header .lnb .m_nav > a {filter:invert(1);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li:nth-child(2) > a::after {width:100%;}
 header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
-main .store {max-width:1640px; margin:0 auto;}
-main .store .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
-main .store > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
+main .store_container {max-width:1640px; margin:0 auto;}
+main .store_container .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
+main .store_container > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
 /* 스토어 카테고리 디자인 */
-main .store .store_type {
+main .store_container .store_type {
     position:relative; text-align:center; display:flex;
     justify-content:center; align-items:flex-start; margin:50px 0 170px;
 }
-main .store .store_type li > a {font-weight:700; line-height:31px; width:190px; letter-spacing:0.2px; display:inline-block;}
-main .store .store_type li:first-child > a {border-bottom:2px solid #000; margin-right:20px;}
-main .store .store_type li:last-child > a {color:#9d9d9d;}
+main .store_container .store_type li > a {font-weight:700; line-height:31px; width:190px; letter-spacing:0.2px; display:inline-block;}
+main .store_container .store_type li:first-child > a {border-bottom:2px solid #000; margin-right:20px;}
+main .store_container .store_type li:last-child > a {color:#9d9d9d;}
 /* 스토어 세부 카테고리(두번째 카테고리는 숨기기) */
-main .store .store_type li .store_category {position:absolute; left:0; top:110px; width:100%;}
-main .store .store_type li .store_category > a {font-size:1.25rem; letter-spacing:0.2px; color:#9d9d9d; margin-left:80px; transition:color 0.5s;}
-main .store .store_type li .store_category > a:hover {color:#485131;}
-main .store .store_type li .store_category > a:first-child {font-weight:700; color:#485131; margin-left:0;}
-main .store .store_type li:last-child .store_category {display:none;}
-main .store .store_main {}
-main .store .store_main .store_title {display:flex; align-items:center;}
-main .store .store_main .store_title h2 {font-size:1.25rem; font-weight:700; margin-right:16px;}
-main .store .store_main .store_title .location {
+main .store_container .store_type li .store_category {position:absolute; left:0; top:110px; width:100%;}
+main .store_container .store_type li .store_category > a {font-size:1.25rem; letter-spacing:0.2px; color:#9d9d9d; margin-left:80px; transition:color 0.5s;}
+main .store_container .store_type li .store_category > a:hover {color:#485131;}
+main .store_container .store_type li .store_category > a:first-child {font-weight:700; color:#485131; margin-left:0;}
+main .store_container .store_type li:last-child .store_category {display:none;}
+main .store_container .store_main {}
+main .store_container .store_main .store_title {display:flex; align-items:center;}
+main .store_container .store_main .store_title h2 {font-size:1.25rem; font-weight:700; margin-right:16px;}
+main .store_container .store_main .store_title .location {
     font-size:1.125rem; letter-spacing:0.2px; color:#5F5F5F; display:flex; align-items:center;
 }
-main .store .store_main .store_title .location::before {
+main .store_container .store_main .store_title .location::before {
     content:''; display:inline-block; background-repeat:no-repeat;
     background-image:url(../images/location.svg); width:18px; height:18px;
     background-size:cover; margin-right:6px;
     transition:background-image 0.5s;
 }
-main .store .store_main .store_title .location:hover::before {
+main .store_container .store_main .store_title .location:hover::before {
     background-image:url(../images/location_on.svg);
 }
-main .store .store_main .store_video {width:100%; overflow:hidden; text-align:center; margin:24px 0; position:relative;}
-main .store .store_main .store_video::after {
+main .store_container .store_main .store_video {width:100%; overflow:hidden; text-align:center; margin:24px 0; position:relative;}
+main .store_container .store_main .store_video::after {
     content:''; display:inline-block; width:100%; height:130px; background-color:#000;
     background-position:bottom; position:absolute; left:0; bottom:0; z-index:100;
 }
-main .store .store_main .store_video::before {
+main .store_container .store_main .store_video::before {
     content:''; display:inline-block; width:100%; height:130px; background-color:#000;
     background-position:top; position:absolute; left:0; top:0; z-index:100;
 }
-main .store .store_main .store_video video {width:100%;}
-main .store .store_main > p {line-height:2.0; letter-spacing:0.2px; word-break:normal;}
+main .store_container .store_main .store_video video {width:100%;}
+main .store_container .store_main > p {line-height:2.0; letter-spacing:0.2px; word-break:normal;}
 /* 스토어 이미지 디자인 */
-main .store .store_img {display:flex; justify-content:space-between; margin:90px 0;}
-main .store .store_img img {margin-bottom:32px; width:100%;}
-main .store .store_img .left {width:calc((100% - 32px) / 2);}
-main .store .store_img .right {width:calc((100% - 32px) / 2);}
-main .store .store_img .left img:last-child, main .store .store_img .right img:last-child {margin-bottom:0;}
+main .store_container .store_img {display:flex; justify-content:space-between; margin:90px 0;}
+main .store_container .store_img img {margin-bottom:32px; width:100%;}
+main .store_container .store_img .left {width:calc((100% - 32px) / 2);}
+main .store_container .store_img .right {width:calc((100% - 32px) / 2);}
+main .store_container .store_img .left img:last-child, main .store .store_img .right img:last-child {margin-bottom:0;}

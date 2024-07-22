@@ -1,6 +1,6 @@
-body {background-color:#FDFBF4;}
+body {background-color:#FDFBF4; overflow-x:hidden;}
 /* ---------- header ---------- */
-header {width:100vw; position:fixed; z-index:999; padding:40px 70px;}
+header {width:100vw; position:fixed; z-index:999999; padding:40px 70px;}
 header .logo {position:absolute; left:70px; top:40px;}
 header .logo a {}
 header .logo a img {filter:invert(1); width:100%;}
@@ -116,12 +116,12 @@ header .search_container .rec-slide .swiper-wrapper {margin-bottom:50px;}
     align-items:center; justify-content:space-between;
 }
 .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li > a > img {width:18px;}
-.m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li .sub {}
+.m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li .sub {padding-left:10px;}
 .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li .sub > li {margin-top:16px;}
 .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li .sub > li:last-child {padding-bottom:16px;}
 .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li .sub > li > a {color:#9D9D9D; display:inline-block; transition:filter 0.3s;}
 .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li .sub > li > a:hover {filter:brightness(1.2);}
-.m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li:first-child .sub > li:last-child > a {border-top:1px solid #E0E0E0; padding-top:16px; padding-left:0;}
+.m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li:first-child .sub > li:last-child {border-top:1px solid #E0E0E0; padding-top:16px; padding-left:0; display:inline-block;}
 /* m_nav - link & contact_lang */
 .m_nav .m_nav_wrap .contact_lang {
     text-align:left; position:absolute; left:20px; bottom:50px; display:flex; justify-content:space-between; align-items:flex-end;
@@ -137,7 +137,10 @@ header .search_container .rec-slide .swiper-wrapper {margin-bottom:50px;}
 .m_nav .m_nav_wrap .contact_lang .contact .mail {margin-bottom:10px;}
 .m_nav .m_nav_wrap .contact_lang .contact a:hover {filter:brightness(1.5);}
 .m_nav .m_nav_wrap .contact_lang .contact a {font-weight:300; color:#5F5F5F; font-size:0.875rem; transition:filter 0.3s;}
-
+/* m_nav 어두운 배경 디자인 */
+.m_nav .m_nav_bg {
+    width:100vw; height:100vh; position:fixed; background-color:rgba(0, 0, 0, 0.5); left:0; top:0; z-index:10;
+}
 
 /* ---------- footer ---------- */
 footer {height:212px !important; max-width:1780px; margin:0 auto; display:flex; flex-flow:column nowrap;}

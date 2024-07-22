@@ -54,6 +54,7 @@ $('#fullpage').fullpage({
         //현재 스크롤 위치 인식
         console.log(index, nextIndex, direction);
         // "down" 방향일 때 조건
+
         if (direction == 'down' && (index == 1 || index == 2 || index == 4 || index == 5)) {
             console.log(index);
             $('header > nav .gnb > li > a').css('color', '#282828');

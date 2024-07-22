@@ -13,9 +13,9 @@
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/journal.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -32,32 +32,32 @@
         <h1 class="logo"><a href="./index.html"><img src="./images/granhand_logo.png" alt="그랑핸드"></a></h1>
         <nav>
             <ul class="gnb">
-                <li><a href="./shop.html">Shop</a>
+                <li><a href="./shop.html">Shop<img src="./images/arrow_open_close_icn.svg" alt=""></a>
                     <ul class="sub">
-                        <li>Gift Set</li>
-                        <li>Perfume</li>
-                        <li>Home Fragrance</li>
-                        <li>Body</li>
-                        <li>Natural</li>
-                        <li>Tools</li>
-                        <li>Komfortabel Coffee</li>
+                        <li><a href="./shop.html">Gift Set</a></li>
+                        <li><a href="./shop.html">Perfume</a></li>
+                        <li><a href="./shop.html">Home Fragrance</a></li>
+                        <li><a href="./shop.html">Body</a></li>
+                        <li><a href="./shop.html">Natural</a></li>
+                        <li><a href="./shop.html">Tools</a></li>
+                        <li><a href="./shop.html">Komfortabel Coffee</a></li>
                     </ul>
                 </li>
-                <li><a href="./store.html">Store</a>
+                <li><a href="./store.html">Store<img src="./images/arrow_open_close_icn.svg" alt=""></a>
                     <ul class="sub">
-                        <li>GRANHAND.</li>
-                        <li>Komfortabel COFFEE.</li>
+                        <li><a href="./store.html">GRANHAND.</a></li>
+                        <li><a href="./store.html">Komfortabel COFFEE.</a></li>
                     </ul>
                 </li>
-                <li><a href="./journal.html">Journal</a>
+                <li><a href="./journal.html">Journal<img src="./images/arrow_open_close_icn.svg" alt=""></a>
                     <ul class="sub">
-                        <li>All</li>
-                        <li>News</li>
-                        <li>Culture</li>
-                        <li>Life</li>
-                        <li>Team</li>
-                        <li>Essay</li>
-                        <li>Film</li>
+                        <li><a href="./journal.html">All</a></li>
+                        <li><a href="./journal.html">News</a></li>
+                        <li><a href="./journal.html">Culture</a></li>
+                        <li><a href="./journal.html">Life</a></li>
+                        <li><a href="./journal.html">Team</a></li>
+                        <li><a href="./journal.html">Essay</a></li>
+                        <li><a href="./journal.html">Film</a></li>
                     </ul>
                 </li>
                 <li><a href="./wallpaper.html">Wallpaper</a></li>
@@ -159,14 +159,41 @@
             </div>
             <!-- mobile side nav -->
             <div class="m_nav">
-                <a href="#" class="all_nav"><img src="./images/hamburger_icn.svg" alt="#"></a>
-                <!-- 모바일 내비 제작 위치 -->
+                <a href="#" class="all_nav"><img src="./images/menu_icn.svg" alt="#"></a>
+                <div class="m_nav_wrap">
+                    <a href="#" class="close"><img src="./images/close_icn.svg" alt=""></a>
+                    <div class="m_nav_lnb">
+                        <div class="m_lnb">
+                            <a href="#" class="search"><img src="./images/search_icn.svg" alt=""><span>Search</span></a>
+                            <a href="./cart.html" class="cart"><img src="./images/bag_icn.svg" alt=""><span>Cart</span></a>
+                            <a href="./login.html" class="login"><img src="./images/mypage_icn.svg" alt=""><span>Login</span></a>
+                        </div>
+                        <!-- 모바일 내비 제작 위치 -->
+                    </div>
+                    <div class="link">
+                        <a href="#"><img src="./images/instagram.svg" alt="인스타그램"></a>
+                        <a href="#"><img src="./images/youtube.svg" alt="유튜브"></a>
+                    </div>
+                    <div class="contact_lang">
+                        <div class="contact">
+                            <div class="mail"><p>메일</p><a href="#">hello@granhand.com</a></div>
+                            <div class="call"><p>전화</p><a href="#">02-333-6525</a></div>
+                        </div>
+                        <!-- 언어 선택 div -->
+                        <a href="#" class="lang"><img src="./images/language_icn.svg" alt=""></a>
+                        <div class="lang_opt">
+                            <a href="#">한국어</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="m_nav_bg"></div>
             </div>
         </div>
     </header>
     <!--===== main =====-->
     <main>
-        <div class="journal">
+        <div class="journal_container">
             <h1 class="title">Journal</h1>
             <p>향기로운 삶의 조각들, 그랑핸드 Journal 에서 다양한 이야기와 경험을 들려드릴게요.</p>
             <h2>이번주 새로운 Journal</h2>
