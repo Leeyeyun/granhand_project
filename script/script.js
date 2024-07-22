@@ -56,8 +56,8 @@ $('#fullpage').fullpage({
         // "down" 방향일 때 조건
         if (direction == 'down' && (index == 1 || index == 2 || index == 4 || index == 5)) {
             console.log(index);
-            $('nav .gnb > li > a').css('color', '#282828');
-            $('nav .gnb > li > a').addClass('active');
+            $('header > nav .gnb > li > a').css('color', '#282828');
+            $('header > nav .gnb > li > a').addClass('active');
             $('header .lnb > a').addClass('invert');
             $('header .logo > a > img').addClass('invert');
             $('header .m_nav > a > img').addClass('invert');
@@ -65,8 +65,8 @@ $('#fullpage').fullpage({
         // "up" 방향일 때 조건
         else if (direction == 'up' && (index == 6 || index == 4 || index == 3)) {
             console.log(index);
-            $('nav .gnb > li > a').css('color', '#282828');
-            $('nav .gnb > li > a').addClass('active');
+            $('header > nav .gnb > li > a').css('color', '#282828');
+            $('header > nav .gnb > li > a').addClass('active');
             $('header .lnb > a').addClass('invert');
             $('header .logo > a > img').addClass('invert');
             $('header .m_nav > a > img').addClass('invert');
@@ -74,8 +74,8 @@ $('#fullpage').fullpage({
         // 그 외의 경우
         else {
             console.log(index)
-            $('nav .gnb > li > a').css('color', '#fff');
-            $('nav .gnb > li > a').removeClass('active');
+            $('header > nav .gnb > li > a').css('color', '#fff');
+            $('header > nav .gnb > li > a').removeClass('active');
             $('header .lnb > a').removeClass('invert');
             $('header .logo > a > img').removeClass('invert');
             $('header .m_nav > a > img').removeClass('invert');

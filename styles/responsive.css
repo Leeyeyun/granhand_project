@@ -1,13 +1,12 @@
 /* ------------------- width 1640px ------------------- */
 @media screen and (max-width:1640px){
-    main .shop .shop_wrap,
-    main .store .store_wrap, main .journal .journal_wrap {padding:0 70px;}
+    main .shop .shop_wrap, main .store .store_wrap, main .journal .journal_wrap {padding:0 70px;}
     main .journal .journal_wrap .journal_contents .j_main {width:40%;}
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%;}
     main .footer, footer {padding:0 70px;}
 }
 @media screen and (max-width:1200px){
-    header nav, header .lnb .lang {display:none;}
+    header > nav, header > .lnb > .lang {display:none;}
     header .lnb .m_nav, header .lnb .m_nav .m_nav_lnb > nav {display:block;}
     header nav .gnb > li .sub {display:block;}
     header .logo {left:20px;}
@@ -57,7 +56,7 @@
 @media screen and (max-width:760px){
     header .logo a img {width:80%;}
     header .lnb {top:48px;}
-    header .lnb a {margin-right:16px;}
+    header .lnb > a {margin-right:16px;}
     header .lnb img {width:80%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
     main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_contents {width:100%;}
