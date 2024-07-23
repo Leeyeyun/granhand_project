@@ -2,8 +2,21 @@ const swiper1 = new Swiper('.journal-slide',{
     effect:'',
     autoplay:{delay:3000},
     loop:true,
-    slidesPerView:2,
-    spaceBetween:32,
+    slidesPerView:1,
+    spaceBetween:16,
+    breakpoints: {
+        1640:{//1640px 이상인 경우
+            spaceBetween:36,
+            slidesPerView:2,
+        },
+        760:{//760px 이상인 경우
+            spaceBetween:24,
+            slidesPerView:2,
+        },
+        501:{//500px 이상인 경우
+            slidesPerView:2,
+        },
+    },
     pagination:{
         el:'.journal_pagination .swiper-pagination',
         type:'fraction',

@@ -7,6 +7,13 @@
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%;}
     /* sub-store */
     main .store_container .store_type li .store_category > a {margin-right:50px;}
+    /* sub-journal */
+    main .journal_container .journal_pagination {width:calc(100% - 140px);}
+    main .journal_container .journal_pagination .swipe_arrow {top:210px;}
+    main .journal_container .journal-slide .swiper-wrapper .j_2 .j_contents .text > p {width:65%;}
+    main .journal_container .journal-slide .swiper-wrapper .j_2 .j_contents .text > p br {display:none;}
+    main .journal_container .journal-slide .swiper-wrapper .j_4 .j_contents .text > p br {display:none;}
+    main .journal_container .journal_area .journal_contents .j_img {height:300px;}
 }
 @media screen and (max-width:1200px){
     header > nav, header > .lnb > .lang {display:none;}
@@ -51,7 +58,17 @@
     main .store_container .store_type li .store_category > a {font-size:1rem;}
     main .store_container .store_img > div {width:calc((100% - 20px) / 2);}
     main .store_container .store_img img {margin-bottom:20px;}
+    /* sub-journal */
+    main .journal_container .journal_pagination {width:calc(100% - 40px);}
+    main .journal_container .journal_pagination .swipe_arrow {top:180px;}
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {width:40px; height:40px; left:-20px;}
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-next {width:40px; height:40px; right:-20px;}
+    main .journal_container .journal_type_search .journal_category > a {font-size:1rem; margin-right:36px;}
+    main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text {height:100px;}
+    main .journal_container .journal_area .journal_contents {width:calc((100% - 40px) / 3);}
+    main .journal_container .journal_area .journal_contents .j_img {height:250px;}
 }
+
 @media screen and (max-width:1060px){
     /* main-brand 이미지&텍스트 배치 변경 */
     main .brand .brand_wrap {flex-flow:column nowrap; justify-content:flex-start;}
@@ -76,6 +93,17 @@
     main .shop_container .pd_wrap .pd_container .pd_contents .pd_info .btm .price {font-size:0.875rem;}
     main .shop_container .pd_wrap .pd_container .pd_contents .pd_info .top > p,
     main .shop_container .pd_wrap .pd_container .pd_contents .pd_info .btm .amount {font-size:0.75rem;}
+    /* sub-journal */
+    main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text h3 {font-size:0.875rem;}
+    main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text > p {font-size:0.75rem;}
+    main .journal_container .journal_pagination .swiper-pagination {font-size:0.875rem;}
+    main .journal_container .journal_area .journal_contents .text h3 {display:flex; flex-flow:column nowrap;}
+    main .journal_container .journal_area .journal_contents .text .date_view {flex-flow:column nowrap; align-items:flex-end; width:90px;}
+    main .journal_container .journal_area .journal_contents .text h3 span,
+    main .journal_container .journal_area .journal_contents .text .date_view .date {margin-bottom:6px; margin-left:0;}
+    main .journal_container .journal_area .journal_contents .text .date_view .view {margin-left:0;}
+    main .journal_container .journal_area .journal_contents .j_img {height:220px;}
+    main .journal_container .journal_pagination .swipe_arrow {top:150px;}
 }
 
 @media screen and (max-width:760px){
@@ -116,6 +144,31 @@
     main .store_container .store_img {margin-top:45px;}
     main .store_container .store_img > div {width:calc((100% - 16px) / 2);}
     main .store_container .store_img img {margin-bottom:16px;}
+    /* sub-journal */
+    main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text {
+        flex-flow:column nowrap; height:150px; justify-content:flex-start;
+    }
+    main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text > p {text-align:left; width:100%; margin-top:10px;}
+    main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text > p br {display:none;}
+    main .journal_container .journal_area .journal_contents .text {
+        flex-flow:column nowrap; align-items:flex-start;
+    }
+    main .journal_container .journal_area .journal_contents .text .date_view {align-items:flex-start; flex-flow:row nowrap; width:100%; justify-content:space-between; margin-top:10px;}
+    main .journal_container .journal_area .journal_contents .text .date_view .date,
+    main .journal_container .journal_area .journal_contents .text .date_view .view {font-size:0.75rem;}
+    main .journal_container .journal_area .journal_contents {width:calc((100% - 20px) / 2); margin-bottom:45px;}
+    main .journal_container .journal_type_search {flex-flow:column nowrap; align-items:center;}
+    main .journal_container .journal_type_search .journal_category {margin-bottom:24px;}
+    main .journal_container .journal_type_search .journal_category > a:last-child {margin-right:0;}
+    main .journal_container .journal_type_search #j_search_frm .j_search_wrap input[name^=journal] {
+        width:calc(100vw - 40px); padding:10px 16px;
+    }
+    main .journal_container .journal_type_search #j_search_frm .j_search_wrap input[name^=journal]::placeholder {font-size:0.75rem;}
+    main .journal_container .journal_pagination .swiper-pagination {display:none;}
+    main .journal_container .journal_pagination .swipe_arrow {top:-20px;}
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {left:90%; width:30px; height:30px;}
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-next {right:0; width:30px; height:30px;}
+    main .journal_container .page a {font-size:0.875rem;}
 }
 
 @media screen and (max-width:650px){
@@ -124,6 +177,8 @@
     /* sub-store */
     main .store_container .store_type li .store_category {justify-content:flex-start;}
     main .store_container .store_type li .store_category > a {margin-right:16px; margin-top:20px;}
+    /* sub-journal */
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {left:87%;}
 }
 
 @media screen and (max-width:552px){
@@ -151,21 +206,36 @@
     main .container .title {font-size:1.125rem; padding-top:0;}
     main .container > p {font-size:0.75rem; padding:16px 0;}
     main .shop_container .pd_category {justify-content:flex-start;}
-    main .shop_container .pd_wrap .num_option h2 {font-size:1rem;}
+    main .shop_container .pd_wrap .num_option h2, main .shop_container .pd_wrap .num_option h2 span {font-size:1rem;}
     main .shop_container .pd_wrap .num_option .option li a {font-size:0.75rem;}
     /* m_nav */
     .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li > a {font-size:1rem;}
     /* sub-store */
     main .store_container .store_type li > a {width:170px;}
     main .store_container .store_type li:first-child > a {margin-right:16px;}
+    /* sub-journal */
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {}
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-next {}
+    main .journal_container h2 {font-size:1rem;}
+    main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text {height:max-content;}
+    main .journal_container .journal_area .journal_contents .text h3 {font-size:0.8rem;}
+    main .journal_container .journal_area .journal_contents .j_img {height:150px;}
+    main .journal_container .journal_area .journal_contents {width:calc((100% - 16px) / 2);}
+    main .journal_container .journal_type_search .journal_category > a {font-size:0.875rem;}
 }
 
 @media screen and (max-width:390px){
     /* sub-store */
     main .store_container .store_main .store_title h2,
     main .store_container .store_main .store_title .location {font-size:0.75rem;}
-    main .store_container .store_main > p {font-size:0.625rem;}
+    main .store_container .store_main > p {font-size:0.755rem;}
     main .store_container .store_main .store_video {margin:18px 0;}
     main .store_container .store_img {flex-flow:column nowrap;}
     main .store_container .store_img > div {width:100%;}
+    body {width:100vw; overflow-x:hidden;}
+    main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {left:82%;}
+    main .journal_container .page a {margin-right:10px;}
+    main .journal_container .page, main .shop_container .page {margin-bottom:45px;}
+    main .journal_container .journal_type_search {margin-top:45px;}
+    main .journal_container .journal_type_search .journal_category > a {margin-right:20px;}
 }

@@ -15,9 +15,8 @@ main .journal_container .journal-slide {position:relative; z-index:150;}
 main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents {
     width:calc((100% - 32px) / 2); position:relative;
 }
-main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents > p {height:535px; overflow:hidden; display:flex; justify-content:center; align-items:center;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents > p {height:80%; overflow:hidden; display:flex; justify-content:center; align-items:center;}
 main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents > p > img {width:100%;}
-main .journal_container .journal-slide .swiper-wrapper .j_2 .j_contents > p > img {width:103%;}
 /* hover했을 때 등장하는 view */
 main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents::after {
     content:''; display:inline-block; width:100%; height:0; opacity:0; transition:height 0.6s cubic-bezier(0, 0, 0.1, 1.0), opacity 0.6s cubic-bezier(0, 0, 0.1, 1.0);
@@ -34,33 +33,35 @@ main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents
 main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .view > p > img {width:100%; filter:invert(1);}
 main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text {
     display:flex; justify-content:space-between; align-items:flex-start; padding:16px;
-    border:1px solid #e0e0e0; border-top:0; height:78px;
+    border:1px solid #e0e0e0; border-top:0;
 }
-main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text h3 {font-weight:700;}
+main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text h3 {font-weight:700; line-height:1.5;}
 main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text > p {font-size:0.875rem; line-height:1.7; text-align:right;}
 /* journal 스와이프 디자인 - prev,next,pagination */
-main .journal_container .journal_pagination {}
-main .journal_container .journal_pagination .swiper-pagination {text-align:right; top:358px;}
-main .journal_container .journal_pagination .swipe_arrow {}
+main .journal_container .journal_pagination {position:absolute; width:100%; z-index:555555;}
+main .journal_container .journal_pagination .swiper-pagination {text-align:right; top:-30px; right:0; height:max-content; width:100%;}
+main .journal_container .journal_pagination .swipe_arrow {
+    position:absolute; top:250px; width:100%;
+}
 main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {
-    z-index:200; text-align:left; top:510px; left:-30px;
+    z-index:200; text-align:left; left:-30px;
     content:''; display:inline-block;
     background-image:url(../images/circle_arrow.svg);
     width:60px; height:60px; background-repeat:no-repeat;
-    color:transparent;
+    color:transparent; background-size:cover;
 }
 main .journal_container .journal_pagination .swipe_arrow .swiper-button-next {
-    z-index:200; text-align:right; top:510px; right:-30px;
+    z-index:200; text-align:right; right:-30px;
     content:''; display:inline-block;
     background-image:url(../images/circle_arrow.svg);
-    transform:rotate(-180deg);
+    transform:rotate(-180deg); background-size:cover;
     width:60px; height:60px; background-repeat:no-repeat;
     color:transparent;
 }
 /* 저널 카테고리 */
-main .journal_container .journal_type_search {margin:90px 0 20px; display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:200;}
-main .journal_container .journal_type_search .journal_category {}
-main .journal_container .journal_type_search .journal_category > a {font-size:1.25rem; color:#9d9d9d; margin-right:46px; transition:color 0.5s;}
+main .journal_container .journal_type_search {margin:90px 0 20px; display:flex; justify-content:space-between; align-items:flex-end; position:relative; z-index:200;}
+main .journal_container .journal_type_search .journal_category {display:flex; flex-flow:row wrap; justify-content:flex-start;}
+main .journal_container .journal_type_search .journal_category > a {font-size:1.25rem; color:#9d9d9d; margin-right:46px; transition:color 0.5s; margin-top:20px;}
 main .journal_container .journal_type_search .journal_category > a:hover {color:#485131;}
 main .journal_container .journal_type_search .journal_category > a:first-child {font-weight:700; color:#485131;}
 main .journal_container .journal_type_search #j_search_frm {}
@@ -76,20 +77,29 @@ main .journal_container .journal_type_search #j_search_frm .j_search_wrap input[
     color:#959595; font-size:0.875rem; font-weight:500; 
 }
 /* 저널 콘텐츠 모음 */
-main .journal_container .journal_container {display:flex; flex-flow:row wrap; justify-content:space-between; position:relative; z-index:200;}
-main .journal_container .journal_container .journal_contents {
+main .journal_container .journal_area {display:flex; flex-flow:row wrap; justify-content:space-between; position:relative; z-index:200;}
+main .journal_container .journal_area .journal_contents {
     width:calc((100% - 60px) / 3); margin-bottom:90px;
 }
-main .journal_container .journal_container .journal_contents > p {height:350px; overflow:hidden; display:flex; justify-content:center; align-items:center;}
-main .journal_container .journal_container .journal_contents > p > img {width:100%; transition:transform 0.5s;}
-main .journal_container .journal_container .j_002 > p > img {width:103%;}
-main .journal_container .journal_container .journal_contents > p > img:hover {transform:scale(1.05);}
-main .journal_container .journal_container .journal_contents .text {display:flex; justify-content:space-between; align-items:flex-start; margin-top:12px;}
-main .journal_container .journal_container .journal_contents .text h3 {font-size:0.875rem; font-weight:700;}
-main .journal_container .journal_container .journal_contents .text h3 span {color:#5F5F5F; margin-right:6px; font-weight:700;}
-main .journal_container .journal_container .journal_contents .text .date_view {display:flex; align-items:center;}
-main .journal_container .journal_container .journal_contents .text .date_view .date,
-main .journal_container .journal_container .journal_contents .text .date_view .view {font-size:0.875rem; font-weight:500; color:#9d9d9d; margin-left:10px;}
+main .journal_container .journal_area .journal_contents .j_img {
+    width:100%; height:350px;
+    background-repeat:no-repeat; background-size:cover; background-position:center;
+}
+main .journal_container .journal_area .journal_contents .j1 {background-image:url(../images/j_001.png);}
+main .journal_container .journal_area .journal_contents .j2 {background-image:url(../images/j_002.jpg);}
+main .journal_container .journal_area .journal_contents .j3 {background-image:url(../images/j_003.jpg);}
+main .journal_container .journal_area .journal_contents .j4 {background-image:url(../images/j_004.png);}
+main .journal_container .journal_area .journal_contents .j5 {background-image:url(../images/j_005.png);}
+main .journal_container .journal_area .journal_contents .j6 {background-image:url(../images/j_006.png);}
+main .journal_container .journal_area .journal_contents .j7 {background-image:url(../images/j_007.png);}
+main .journal_container .journal_area .journal_contents .j8 {background-image:url(../images/j_008.jpg);}
+main .journal_container .journal_area .journal_contents .j9 {background-image:url(../images/j_009.png);}
+main .journal_container .journal_area .journal_contents .text {display:flex; justify-content:space-between; align-items:flex-start; margin-top:12px;}
+main .journal_container .journal_area .journal_contents .text h3 {font-size:0.875rem; font-weight:700; line-height:1.2;}
+main .journal_container .journal_area .journal_contents .text h3 span {color:#5F5F5F; margin-right:6px; font-weight:700;}
+main .journal_container .journal_area .journal_contents .text .date_view {display:flex; align-items:center;}
+main .journal_container .journal_area .journal_contents .text .date_view .date,
+main .journal_container .journal_area .journal_contents .text .date_view .view {font-size:0.875rem; font-weight:500; color:#9d9d9d; margin-left:10px;}
 /* 하단 page 디자인 */
 main .journal_container .page {margin-bottom:90px; text-align:center; position:relative; z-index:200;}
 main .journal_container .page a {margin-right:18px; font-weight:500; color:#959595; padding:4px;}
