@@ -14,10 +14,12 @@
     main .journal_container .journal-slide .swiper-wrapper .j_2 .j_contents .text > p br {display:none;}
     main .journal_container .journal-slide .swiper-wrapper .j_4 .j_contents .text > p br {display:none;}
     main .journal_container .journal_area .journal_contents .j_img {height:300px;}
+    /* sub-wallpaper */
+    main .wallpaper_container .wp_container .wp_contents {width:calc((100% - 48px) / 3);}
 }
 @media screen and (max-width:1200px){
     header > nav, header > .lnb > .lang {display:none;}
-    header .lnb .m_nav, header .lnb .m_nav .m_nav_lnb > nav {display:block;}
+    header .lnb .m_nav, header .lnb .m_nav .m_nav_lnb > nav {display:block;height:auto;}
     header > nav .gnb > li > .sub {display:block;}
     header .logo {left:20px;}
     header .lnb {right:20px;}
@@ -169,6 +171,9 @@
     main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {left:90%; width:30px; height:30px;}
     main .journal_container .journal_pagination .swipe_arrow .swiper-button-next {right:0; width:30px; height:30px;}
     main .journal_container .page a {font-size:0.875rem;}
+    /* sub-wallpaper */
+    main .wallpaper_container .wp_container .wp_contents {width:calc((100% - 18px) / 2);}
+    main .wallpaper_container .wp_container .wp_contents .text h2 {font-size:1rem;}
 }
 
 @media screen and (max-width:650px){

@@ -46,6 +46,7 @@ const m_nav_wrap = document.querySelector('.m_nav_wrap')
 const m_nav_lnb = document.querySelector('.m_nav_lnb')
 const all_nav = document.querySelector('.all_nav')
 const m_nav_bg = document.querySelector('.m_nav_bg')
+document.body.style.overflowX = 'hidden';
 
 m_nav_lnb.appendChild(nav_clone)
 

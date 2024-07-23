@@ -1,3 +1,4 @@
+body {width:100vw; overflow-x:hidden;}
 /* 공통 설정 */
 main {background-color:#FDFBF4;}
 main .first .first_wrap, main .brand .brand_wrap, main .shop .shop_wrap, main .store .store_wrap, main .journal .journal_wrap {height:100vh; overflow:hidden;}

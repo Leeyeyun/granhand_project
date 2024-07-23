@@ -1,4 +1,4 @@
-html, body {background-color:#FDFBF4; overflow-x:hidden; width:100vw;}
+body {background-color:#FDFBF4; overflow-x:hidden;}
 /* ---------- header ---------- */
 header {width:100vw; position:fixed; z-index:999999; padding:40px 70px;}
 header .logo {position:absolute; left:70px; top:40px;}
@@ -96,7 +96,7 @@ header .search_container .rec-slide .swiper-wrapper {margin-bottom:50px;}
 /* m_nav 디자인 */
 .m_nav .m_nav_wrap {
     height:100vh; position:fixed; right:0; top:0; z-index:55555;
-    width:70%; background:#FDFBF4; padding:38px 20px 50px; text-align:right;
+    width:70vw; background:#FDFBF4; padding:38px 20px 50px; text-align:right;
 }
 .m_nav .m_nav_wrap .close {filter:invert(1);}
 .m_nav .m_nav_wrap .close img {width:24px;}
