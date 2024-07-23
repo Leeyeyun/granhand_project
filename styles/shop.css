@@ -8,7 +8,7 @@ header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
 main .shop_container {max-width:1640px; margin:0 auto;}
 main .shop_container .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
-main .shop_container > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F; line-height:1.5;}
+main .shop_container > p {line-height:1.5; font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
 main .shop_container .pd_category {
     margin:46px auto 90px; text-align:center; display:flex; justify-content:space-between; width:980px;
 }

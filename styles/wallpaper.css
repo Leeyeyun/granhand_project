@@ -8,7 +8,7 @@ header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
 main .wallpaper_container {max-width:1640px; margin:0 auto; position:relative;}
 main .wallpaper_container .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
-main .wallpaper_container > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
+main .wallpaper_container > p {line-height:1.5; font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
 /* 배경화면 이미지 모음 */
 main .wallpaper_container .wp_container {
     margin-top:90px; display:flex; flex-flow:row wrap; justify-content:space-between; align-content:flex-start;

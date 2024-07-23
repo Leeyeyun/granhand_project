@@ -5,6 +5,8 @@
     main .shop_container, main .store_container, main .journal_container, main .wallpaper_container {padding:0 70px;}
     main .journal .journal_wrap .journal_contents .j_main {width:40%;}
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%;}
+    /* sub-store */
+    main .store_container .store_type li .store_category > a {margin-right:50px;}
 }
 @media screen and (max-width:1200px){
     header > nav, header > .lnb > .lang {display:none;}
@@ -45,7 +47,10 @@
     main .shop_container .pd_wrap .pd_container .pd_contents:nth-last-child(4) {
         margin-bottom:46px;
     }
-    
+    /* sub-store */
+    main .store_container .store_type li .store_category > a {font-size:1rem;}
+    main .store_container .store_img > div {width:calc((100% - 20px) / 2);}
+    main .store_container .store_img img {margin-bottom:20px;}
 }
 @media screen and (max-width:1060px){
     /* main-brand 이미지&텍스트 배치 변경 */
@@ -101,11 +106,24 @@
     main .shop_container .pd_category > a {margin-right:40px; margin-top:20px;}
     main .shop_container .pd_category > a:nth-last-child(3) {}
     main .shop_container .pd_category > a:last-child {margin-right:0;}
+    /* sub-store */
+    main .store_container .store_type li .store_category {justify-content:space-between;}
+    main .store_container .store_type li .store_category > a {font-size:0.875rem; margin-right:0;}
+    /* sub-store */
+    main .store_container .store_main .store_title h2,
+    main .store_container .store_main .store_title .location {font-size:1rem;}
+    main .store_container .store_main {font-size:0.875rem;}
+    main .store_container .store_img {margin-top:45px;}
+    main .store_container .store_img > div {width:calc((100% - 16px) / 2);}
+    main .store_container .store_img img {margin-bottom:16px;}
 }
 
 @media screen and (max-width:650px){
     main .shop_container .pd_category {width:100%;}
     main .shop_container .pd_category > a {font-size:0.875rem; margin-right:34px;}
+    /* sub-store */
+    main .store_container .store_type li .store_category {justify-content:flex-start;}
+    main .store_container .store_type li .store_category > a {margin-right:16px; margin-top:20px;}
 }
 
 @media screen and (max-width:552px){
@@ -124,16 +142,30 @@
 
 @media screen and (max-width:500px){
     /* header */
-    header .logo a img {width:70%;}
+    header .logo a img {width:65%;}
     header .lnb {top:44px;}
-    header .lnb > a {margin-right:14px;}
+    header .lnb > a {margin-right:8px;}
     header .lnb img {width:70%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
-    main .shop_container .title {font-size:1.125rem; padding-top:0;}
-    main .shop_container > p {font-size:0.75rem; padding:16px 0;}
+    /* sub-shop */
+    main .container .title {font-size:1.125rem; padding-top:0;}
+    main .container > p {font-size:0.75rem; padding:16px 0;}
     main .shop_container .pd_category {justify-content:flex-start;}
     main .shop_container .pd_wrap .num_option h2 {font-size:1rem;}
     main .shop_container .pd_wrap .num_option .option li a {font-size:0.75rem;}
     /* m_nav */
     .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li > a {font-size:1rem;}
+    /* sub-store */
+    main .store_container .store_type li > a {width:170px;}
+    main .store_container .store_type li:first-child > a {margin-right:16px;}
+}
+
+@media screen and (max-width:390px){
+    /* sub-store */
+    main .store_container .store_main .store_title h2,
+    main .store_container .store_main .store_title .location {font-size:0.75rem;}
+    main .store_container .store_main > p {font-size:0.625rem;}
+    main .store_container .store_main .store_video {margin:18px 0;}
+    main .store_container .store_img {flex-flow:column nowrap;}
+    main .store_container .store_img > div {width:100%;}
 }

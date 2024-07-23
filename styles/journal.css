@@ -8,7 +8,7 @@ header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
 main .journal_container {max-width:1640px; margin:0 auto; position:relative;}
 main .journal_container .title {font-size:1.5rem; font-weight:700; letter-spacing:0.2px; padding-top:90px;}
-main .journal_container > p {font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
+main .journal_container > p {line-height:1.5; font-weight:500; padding:20px 0; border-bottom:1px solid #e0e0e0; color:#5F5F5F;}
 main .journal_container h2 {font-size:1.125rem; font-weight:700; letter-spacing:0.2px; margin:49px 0 16px;}
 /* journal 스와이프 디자인 */
 main .journal_container .journal-slide {position:relative; z-index:150;}
