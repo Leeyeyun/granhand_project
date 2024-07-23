@@ -232,10 +232,10 @@
     main .store_container .store_main .store_video {margin:18px 0;}
     main .store_container .store_img {flex-flow:column nowrap;}
     main .store_container .store_img > div {width:100%;}
-    body {width:100vw; overflow-x:hidden;}
     main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {left:82%;}
     main .journal_container .page a {margin-right:10px;}
     main .journal_container .page, main .shop_container .page {margin-bottom:45px;}
     main .journal_container .journal_type_search {margin-top:45px;}
     main .journal_container .journal_type_search .journal_category > a {margin-right:20px;}
+    body::-webkit-scrollbar {display:none;}
 }
