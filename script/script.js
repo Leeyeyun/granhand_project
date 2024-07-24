@@ -21,7 +21,6 @@ const swiper1 = new Swiper('.shop-slide', {
     },
 });
 
-
 const swiper2 = new Swiper('.store-slide',{
     effect:'',
     /* autoplay:{}, */

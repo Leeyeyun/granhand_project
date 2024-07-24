@@ -109,8 +109,10 @@
 }
 
 @media screen and (max-width:760px){
+    header {height:110px;}
+    header .logo {top:34px;}
     header .logo a img {width:80%;}
-    header .lnb {top:48px;}
+    header .lnb {top:40px;}
     header .lnb > a {margin-right:16px;}
     header .lnb img {width:80%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
@@ -202,8 +204,9 @@
 
 @media screen and (max-width:500px){
     /* header */
+    header {height:100px;}
     header .logo a img {width:65%;}
-    header .lnb {top:44px;}
+    header .lnb {top:38px;}
     header .lnb > a {margin-right:8px;}
     header .lnb img {width:70%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
