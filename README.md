@@ -36,3 +36,8 @@ header .lnb #lang_frm .lang_wrap #lang_option {
 * 오류의 원인 : `header` - `m_nav`
 * 메인화면에서는 `header`가 `position:fixed`로 설정되어있지만, 나머지 서브페이지에서는 `position:sticky`로 설정되어있음 -> 이 과정에서 오류가 생김
 * 오류 해결 : `header`의 포지션을 변경
+## 24.07.24
+### 반응형 서브페이지 제작 (검색창 / 장바구니)
+#### 어려웠던 점
+* 스크롤이 이중으로 나오는 오류 발생
+* 오류의 원인 : html 자체에 css를 적용해서 발생됨. 수정됨

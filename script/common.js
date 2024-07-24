@@ -3,12 +3,17 @@ const swiper4 = new Swiper('.rec-slide',{
     effect:'',
     autoplay:{delay:4000},
     centeredSlides:true,
-    slidesPerView:'auto',
+    slidesPerView:'1',
     loop:true,
     spaceBetween:36,
     pagination:{
         el:'.rec-slide .swiper-pagination',
         type:'bullets',
+    },
+    breakpoints : {
+        501:{
+            slidesPerView:'auto',
+        },
     },
 });
 
@@ -23,11 +28,13 @@ search_icn.addEventListener('click',(e)=>{
     e.preventDefault();
     search_container.style.transform = 'translateY(0)'
     search_container.style.opacity = '1'
+    document.body.style.overflow = 'hidden';
 })
 close.addEventListener('click',(e)=>{
     e.preventDefault();
     search_container.style.transform = 'translateY(-100vh)'
     search_container.style.opacity = '0'
+    document.body.style.overflow = 'visible';
 })
 
 //lang icn 클릭 시 옵션 등장

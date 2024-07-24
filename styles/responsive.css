@@ -2,7 +2,8 @@
 @media screen and (max-width:1640px){
     main .shop .shop_wrap, main .store .store_wrap, main .journal .journal_wrap,
     main .footer, footer,
-    main .shop_container, main .store_container, main .journal_container, main .wallpaper_container {padding:0 70px;}
+    main .shop_container, main .store_container, main .journal_container, main .wallpaper_container,
+    main .cart {padding:0 70px;}
     main .journal .journal_wrap .journal_contents .j_main {width:40%;}
     main .journal .journal_wrap .journal_contents .sub-journal-slide {width:55%;}
     /* sub-store */
@@ -19,7 +20,7 @@
 }
 @media screen and (max-width:1200px){
     header > nav, header > .lnb > .lang {display:none;}
-    header .lnb .m_nav, header .lnb .m_nav .m_nav_lnb > nav {display:block;height:auto;}
+    header .lnb .m_nav, header .lnb .m_nav .m_nav_lnb > nav {display:block; height:auto;}
     header > nav .gnb > li > .sub {display:block;}
     header .logo {left:20px;}
     header .lnb {right:20px;}
@@ -29,7 +30,7 @@
     main .shop .shop_wrap,
     main .store .store_wrap .store-slide .swiper-slide .bg,
     main .store .store_wrap, main .journal .journal_wrap,
-    main .shop_container, main .store_container, main .journal_container, main .wallpaper_container {padding:0 20px;}
+    main .shop_container, main .store_container, main .journal_container, main .wallpaper_container, main .cart {padding:0 20px;}
     main .store .store_wrap .store-slide .swiper-button-prev {width:80px; height:80px; left:36px;}
     main .store .store_wrap .store-slide .swiper-button-next {width:80px; height:80px; right:36px;}
     main .footer .btm, footer .btm {flex-flow:row wrap; justify-content:flex-start;}
@@ -69,6 +70,13 @@
     main .journal_container .journal-slide .swiper-wrapper .swiper-slide .j_contents .text {height:100px;}
     main .journal_container .journal_area .journal_contents {width:calc((100% - 40px) / 3);}
     main .journal_container .journal_area .journal_contents .j_img {height:250px;}
+    /* sub-cart(contain) */
+    main .cart > .cart_list .cart_contents .cart_item .product_info .product_select .item_wrap .product_name h2 {
+        display:flex; flex-flow:column nowrap;
+        align-items:flex-start;
+    }
+    main .cart > .cart_list .cart_contents .cart_item .product_info .product_select .item_wrap .product_name h2 span {padding-left:0; padding-top:10px;}
+    main .cart > .cart_list .cart_contents .cart_item .product_info .product_select .item_wrap .product_name h2, main .cart > .cart_list .info li {font-size:1rem;}
 }
 
 @media screen and (max-width:1060px){
@@ -106,6 +114,11 @@
     main .journal_container .journal_area .journal_contents .text .date_view .view {margin-left:0;}
     main .journal_container .journal_area .journal_contents .j_img {height:220px;}
     main .journal_container .journal_pagination .swipe_arrow {top:150px;}
+    /* 검색창 */
+    header .search_container #search_frm .search_wrap input[name^=scent] {width:720px; line-height:60px; font-size:1.25rem; background-position-x:calc(100% - 20px);}
+    header .search_container .rec-slide {width:720px;}
+    header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1.25rem;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap h2 {font-size:1rem;}
 }
 
 @media screen and (max-width:760px){
@@ -176,6 +189,11 @@
     /* sub-wallpaper */
     main .wallpaper_container .wp_container .wp_contents {width:calc((100% - 18px) / 2);}
     main .wallpaper_container .wp_container .wp_contents .text h2 {font-size:1rem;}
+    /* 검색창 */
+    header .search_container #search_frm .search_wrap input[name^=scent] {width:640px; line-height:54px; font-size:1rem; background-size:20px;}
+    header .search_container .rec-slide {width:640px;}
+    header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1rem;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-size:0.875rem;}
 }
 
 @media screen and (max-width:650px){
@@ -186,6 +204,11 @@
     main .store_container .store_type li .store_category > a {margin-right:16px; margin-top:20px;}
     /* sub-journal */
     main .journal_container .journal_pagination .swipe_arrow .swiper-button-prev {left:87%;}
+    /* 검색창 */
+    header .search_container #search_frm .search_wrap input[name^=scent] {width:500px;}
+    header .search_container .rec-slide {width:500px;}
+    header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1rem;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-size:0.875rem;}
 }
 
 @media screen and (max-width:552px){
@@ -211,11 +234,12 @@
     header .lnb img {width:70%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
     /* sub-shop */
-    main .container .title {font-size:1.125rem; padding-top:0;}
-    main .container > p {font-size:0.75rem; padding:16px 0;}
+    main .container .title, main .cart .title .left > h1 {font-size:1.125rem; padding-top:0;}
+    main .container > p, main .cart .title .left > p {font-size:0.75rem; padding:16px 0;}
     main .shop_container .pd_category {justify-content:flex-start;}
     main .shop_container .pd_wrap .num_option h2, main .shop_container .pd_wrap .num_option h2 span {font-size:1rem;}
     main .shop_container .pd_wrap .num_option .option li a {font-size:0.75rem;}
+    main .shop_container .pd_wrap .pd_container .pd_contents .pd_info .top > p {text-wrap:wrap; line-height:1.5; text-align:left;}
     /* m_nav */
     .m_nav .m_nav_wrap .m_nav_lnb > nav .gnb > li > a {font-size:1rem;}
     /* sub-store */
@@ -230,6 +254,14 @@
     main .journal_container .journal_area .journal_contents .j_img {height:150px;}
     main .journal_container .journal_area .journal_contents {width:calc((100% - 16px) / 2);}
     main .journal_container .journal_type_search .journal_category > a {font-size:0.875rem;}
+    /* 검색창 */
+    header .search_container #search_frm .search_wrap input[name^=scent] {width:420px;}
+    header .search_container .rec-slide {width:420px;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap {width:420px;}
+    header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1rem;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-size:0.875rem;}
+    main .cart {margin:0 auto 45px;}
+    main .cart .title {margin-top:0;}
 }
 
 @media screen and (max-width:390px){
@@ -246,4 +278,12 @@
     main .journal_container .journal_type_search {margin-top:45px;}
     main .journal_container .journal_type_search .journal_category > a {margin-right:20px;}
     body::-webkit-scrollbar {display:none;}
+    /* 검색창 */
+    header .search_container > h1 > img {width:80%;}
+    header .search_container #search_frm .search_wrap input[name^=scent] {width:300px; margin:30px 0 45px;}
+    header .search_container .rec-slide {width:300px;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap {width:300px;}
+    header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1rem;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-size:0.875rem;}
+    header .search_container .rec-slide .swiper-slide .rec_wrap > p {font-size:0.75rem;}
 }

@@ -65,7 +65,7 @@ header .search_container #search_frm .search_wrap input[name^=scent] {
     background-color:transparent; border:0; outline:0;
     line-height:78px; width:810px; padding:0 16px; border-bottom:2px solid #B9B9B9;
     background-image:url(../images/scent_search_icn.svg); background-repeat:no-repeat;
-    background-position:right center; background-position-x:760px;
+    background-position:right center; background-position-x:calc(100% - 20px);
     font-size:1.5rem; letter-spacing:0.2px; color:#fff; margin:46px 0 80px;
 }
 header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {

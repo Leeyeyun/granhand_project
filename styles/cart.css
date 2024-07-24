@@ -1,9 +1,11 @@
 /* cart header 디자인 수정 */
-header {position:sticky; height:134px;}
+header {background-color:#FDFBF4; height:130px;}
+header .lnb .m_nav > a {filter:invert(1);}
 header .logo a img, header .lnb > a {filter:invert(0);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li > a::after {background-color:#282828;}
 /* main */
+main {padding-top:130px;}
 main {background-color:#FDFBF4;}
 main .cart {display:flex; flex-flow:column nowrap; max-width:1640px; margin:90px auto;}
 main .cart .title {display:flex; justify-content:space-between; align-items:center;}
@@ -11,7 +13,7 @@ main .cart .title .left > h1 {
     font-size:1.5rem; font-weight:700; letter-spacing:0.2px;
     align-items:center;
 }
-main .cart .title .left > p {line-height:56px; font-weight:500; color:#5f5f5f;}
+main .cart .title .left > p {line-height:1.5; font-weight:500; padding:20px 0; color:#5f5f5f;}
 main .cart > .cart_list {}
 main .cart > .cart_list .info {
     display:flex; align-items:center;
