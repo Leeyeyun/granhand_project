@@ -113,8 +113,8 @@ for(let i of m_gnb_li_a){
 all_nav.addEventListener('click',(e)=>{
     e.preventDefault();
     /* m_nav animaition 설정 */
-    m_nav_wrap.style.animation = 'm_nav_open 0.8s both cubic-bezier(0.52, 0.02, 0.58, 1)'
-    m_nav_bg.style.animation = 'bg_opa 0.8s both'
+    m_nav_wrap.style.animation = 'm_nav_open 0.7s both cubic-bezier(0.52, 0.02, 0.58, 1)'
+    m_nav_bg.style.animation = 'bg_opa 0.7s both'
     //bg
     m_nav_bg.style.opacity = '0.5'
     m_nav_bg.style.display = 'block'
@@ -145,8 +145,8 @@ all_nav.addEventListener('click',(e)=>{
 //nav_close 클릭 시 m_nav 사라지기
 nav_close.addEventListener('click',(e)=>{
     e.preventDefault();
-    m_nav_wrap.style.animation = 'm_nav_close 0.8s both cubic-bezier(0.52, 0.02, 0.58, 1)'
-    m_nav_bg.style.animation = 'bg_opa_c 0.8s both'
+    m_nav_wrap.style.animation = 'm_nav_close 0.7s both cubic-bezier(0.52, 0.02, 0.58, 1)'
+    m_nav_bg.style.animation = 'bg_opa_c 0.7s both'
     //bg
     m_nav_bg.style.opacity = '0'
     m_nav_bg.style.display = 'none'
