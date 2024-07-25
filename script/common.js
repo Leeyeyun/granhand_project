@@ -141,15 +141,17 @@ for(let i of m_gnb_li_a){
 }
 m_gnb_li_a[3].href = './wallpaper.html'
 
-//sub 초기값 : 처음 sub만 보이고 나머지 닫기
+//sub 초기값 : sub 닫기
 for(let i of m_nav_sub){
     i.style.height = '0';
     i.style.overflow = 'hidden'
     i.style.opacity = '0'
 }
 for(let i of m_gnb_li_a){
-    i.addEventListener('click',()=>{
-        console.log(i.nextElementSibling)
+    i.addEventListener('click',(e)=>{
+        if (i !== m_gnb_li_a[m_gnb_li_a.length - 1]) {
+            e.preventDefault();
+        }
         for(let a of sub_close_arrow){
             a.style.transform = 'rotate(0)'
         }

@@ -1,7 +1,7 @@
 header {position:sticky; height:134px;}
 body {
     background-image:url(../images/login_bg.jpg); background-repeat:no-repeat;
-    background-position:auto; background-size: cover;
+    background-position:center; background-size: cover;
 }
 /* main - login */
 main {display:flex; justify-content:center; align-items:center; text-align:center;}
@@ -12,7 +12,7 @@ main .login {
     padding:46px 36px; width:478px; height:605px;
 }
 main .login > h2 {font-size:3rem; font-weight:700; color:#000;}
-main .login > p {font-size:0.875rem; margin:22px 0 15px; font-weight:500;}
+main .login > p {font-size:0.875rem; margin:22px 0 15px; font-weight:500; line-height:1.5; word-break:keep-all;}
 main .login .member_option {display:flex; width:100%;}
 main .login .member_option > a {
     line-height:45px; border-bottom:2px solid #000;
@@ -40,6 +40,13 @@ main .login #member_login_frm .login_wrap .login_keep_find .login_keep input[nam
 }
 main .login #member_login_frm .login_wrap .login_keep_find .login_find > a,
 main .login #member_login_frm .login_wrap .login_keep_find .login_keep span {color:#fff; font-size:0.75rem; font-weight:500; padding-left:26px;}
+/* 아이디,비밀번호 찾기 사이 구별라인 */
+main .login #member_login_frm .login_wrap .login_keep_find .login_find > a:first-child {display:inline-flex; align-items:center; padding-left:0;}
+main .login #member_login_frm .login_wrap .login_keep_find .login_find > a:last-child {padding-left:8px;}
+main .login #member_login_frm .login_wrap .login_keep_find .login_find > a:first-child::after {
+    content:''; display:inline-block;
+    width:2px; height:10px; background-color:#fff; margin-left:13px;
+}
 /* 로그인 버튼 */
 main .login #member_login_frm .join_login {display:flex; flex-flow:column nowrap; justify-content:center;}
 main .login #member_login_frm .join_login button {line-height:45px; border:0; font-weight:700;}
@@ -48,7 +55,15 @@ main .login #member_login_frm .join_login .join_btn {
     margin:8px 0 46px; background-color:#959595; color:#fff;
     line-height:45px; border:0; font-weight:700;
 }
-main .login #member_login_frm .join_login .kakao_btn {background-color:#FAE300; color:#391B1B;}
+main .login #member_login_frm .join_login .kakao_btn {
+    background-color:#FAE300; color:#391B1B;
+    display:inline-flex; justify-content:center; align-items:center;
+}
+main .login #member_login_frm .join_login .kakao_btn::before {
+    content:''; display:inline-block;
+    width:18px; height:18px; background-image:url(../images/kakao.svg);
+    background-repeat:no-repeat; background-size:cover; margin-right:10px;
+}
 /* login_frm-비회원 */
 main .login #nonmember_login_frm {display:none; text-align:left; width:100%;}
 main .login #nonmember_login_frm .login_wrap {}
@@ -65,7 +80,7 @@ main .login #nonmember_login_frm .order_check_join .join_btn {
     background-color:#959595; color:#fff; margin:8px 0 53px;
     line-height:45px; font-weight:600; width:100%; text-align:center;
 }
-main .login #nonmember_login_frm > p {font-size:0.75rem; color:#fff; text-align:center;}
+main .login #nonmember_login_frm > p {font-size:0.75rem; color:#fff; text-align:center; line-height:1.5;}
 main .login #nonmember_login_frm > p > a {font-size:0.75rem; color:#fff; font-weight:500; text-decoration: underline;}
 
 /* footer 개별 디자인 */

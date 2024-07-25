@@ -1,5 +1,6 @@
 /* store header 디자인 수정 */
 header {position:sticky; height:134px;}
+header .lnb .m_nav > a {filter:invert(1);}
 header .logo a img, header .lnb > a {filter:invert(0);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li > a::after {background-color:#282828;}
@@ -7,7 +8,7 @@ header nav .gnb > li > a::after {background-color:#282828;}
 /* main .user_info {display:none;} */
 /* main .agreement {display:none;} */
 /* ----- main-agreement ----- */
-main .agreement {max-width:1180px; margin:0 auto; padding-top:96px;}
+main .agreement {max-width:1180px; margin:0 auto; padding-top:96px; padding-top:90px;}
 main .user_info {max-width:690px; margin:0 auto; padding-top:96px;}
 main h1 {font-size:1.5rem; font-weight:700; text-align:center;}
 /* 가입 순서 디자인 */
@@ -34,7 +35,7 @@ main #agreement_frm .user_agree .agree_check li input[name=agree] {
 /* checkbox 초기값 */
 main #agreement_frm .user_agree .agree_check li label[for*=agree] {
     background-image:url(../images/unchecked.svg);
-    background-repeat:no-repeat;
+    background-repeat:no-repeat; background-size: auto;
     padding-left:36px; height:24px; width:100%;
     display:inline-flex; align-items:center;
 }
@@ -67,7 +68,7 @@ main #agreement_frm .btn {
 }
 main #agreement_frm .btn button {width:406px; font-weight:700; border:0; line-height:45px; margin-right:16px;}
 main #agreement_frm .btn .back_btn {background-color:#fff; border:1px solid #959595;}
-main #agreement_frm .btn > .join_btn {color:#fff; background-color:#959595;}
+main #agreement_frm .btn > .join_btn {color:#fff; background-color:#959595; margin-right:0;}
 
 /* ----- main-user_info ----- */
 main .user_info {text-align:center;}

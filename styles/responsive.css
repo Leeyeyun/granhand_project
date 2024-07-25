@@ -77,6 +77,9 @@
     }
     main .cart > .cart_list .cart_contents .cart_item .product_info .product_select .item_wrap .product_name h2 span {padding-left:0; padding-top:10px;}
     main .cart > .cart_list .cart_contents .cart_item .product_info .product_select .item_wrap .product_name h2, main .cart > .cart_list .info li {font-size:1rem;}
+    footer {height:max-content !important;}
+    /* sub-약관동의 */
+    main .agreement {padding:90px 20px;}
 }
 
 @media screen and (max-width:1060px){
@@ -119,6 +122,7 @@
     header .search_container .rec-slide {width:720px;}
     header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1.25rem;}
     header .search_container .rec-slide .swiper-slide .rec_wrap h2 {font-size:1rem;}
+    footer {height:max-content !important;}
 }
 
 @media screen and (max-width:760px){
@@ -194,6 +198,11 @@
     header .search_container .rec-slide {width:640px;}
     header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1rem;}
     header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-size:0.875rem;}
+    /* sub-login */
+    main .login {width:450px; height:580px; justify-content:center;}
+    main .login > h2 {font-size:2.5rem;}
+    /* sub-join */
+    main .user_info {padding:90px 20px 0;}
 }
 
 @media screen and (max-width:650px){
@@ -237,7 +246,7 @@
     header .logo a img {width:65%;}
     header .lnb {top:38px;}
     header .lnb > a {margin-right:8px;}
-    header .lnb img {width:70%;}
+    header .lnb img {width:75%;}
     header .lnb .m_nav a img {width:24px; height:24px;}
     /* sub-shop */
     main .container .title, main .cart .title .left > h1 {font-size:1.125rem; padding-top:0;}
@@ -268,6 +277,23 @@
     header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-size:0.875rem;}
     main .cart {margin:0 auto 45px;}
     main .cart .title {margin-top:0;}
+    /* sub-login */
+    main .login #nonmember_login_frm > p {width:80%; word-break:keep-all; margin:0 auto;}
+    main .login #nonmember_login_frm .order_check_join .join_btn {margin:8px 0 15px;}
+    /* sub-약관동의 */
+    main .agreement {padding-bottom:0;}
+    main #agreement_frm .btn {flex-flow:column nowrap;}
+    main #agreement_frm .btn button:first-child {margin-bottom:8px;}
+    main #agreement_frm .btn button {margin-right:0; width:100%;}
+    /* sub-join */
+    main .user_info .profile {width:100px;}
+    main .user_info .profile > img {width:100%;}
+    main .user_info .profile > a {width:32px; height:32px; padding:6px;}
+    main .user_info .profile > a > img {width:100%;}
+    main .user_info .user_info_wrap .info_write dd .phone_authentication {width:100%;}
+    /* sub-장바구니 */
+    main .cart > .cart_list .info li {display:none;}
+    main .cart > .cart_list .info li:first-child {display:block; width:100%;}
 }
 
 @media screen and (max-width:390px){
@@ -299,4 +325,35 @@
     header .search_container #search_frm .search_wrap input[name^=scent]::placeholder {font-size:1rem;}
     header .search_container .rec-slide .swiper-slide .rec_wrap .hashtag > a {font-size:0.875rem;}
     header .search_container .rec-slide .swiper-slide .rec_wrap > p {font-size:0.75rem;}
+    /* sub-login */
+    main .login {width:calc(100% - 40px); height:560px; padding:40px 20px;}
+    main .login > h2 {font-size:2.5rem;}
+    main .login > p {margin:16px 0;}
+    main .login #member_login_frm .join_login .join_btn {margin:8px 0 16px; line-height:40px; font-size:0.875rem;}
+    main .login #member_login_frm .login_wrap .id_pw input[name^=user],
+    main .login #nonmember_login_frm .login_wrap .order_phone input[name^=user] {line-height:36px;}
+    main .login #member_login_frm .join_login button,
+    main .login #nonmember_login_frm .order_check_join .order_check_btn,
+    main .login #nonmember_login_frm .order_check_join .join_btn {line-height:40px; font-size:0.875rem;}
+    main .login #nonmember_login_frm .login_wrap .order_phone {margin-bottom:21px;}
+    main .login #nonmember_login_frm > p {width:90%;}
+    /* sub-약관동의 */
+    main .agreement h1 {font-size:1.25rem;}
+    main #agreement_frm .user_agree .agree_check li label[for*=agree] {font-size:0.875rem;}
+    main #agreement_frm .user_agree .agree_check li span {font-size:0.75rem;}
+    main #agreement_frm .btn button {line-height:40px; font-size:0.875rem;}
+    /* sub-join */
+    main .user_info .user_info_wrap .info_write dt {font-size:0.875rem;}
+    main .user_info .user_info_wrap .info_write dd .phone_authentication {line-height:40px; font-size:0.875rem;}
+    main .user_info .user_info_wrap .info_write dd input,
+    main .user_info .user_info_wrap .info_write dd:last-child .address_search .search {line-height:40px; font-size:0.875rem;}
+    main .user_info .user_info_wrap .info_write dd select[name^=email] {height:40px; line-height:40px;}
+    /* main-store */
+    main .store .store_wrap .store-slide .swiper-slide .bg {justify-content:space-between;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .btm {flex-flow:column nowrap; align-items:flex-start;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .store_name {color:#fff;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .store_name span {color:#cbcbcb;}
+    main .store .store_wrap .store-slide .swiper-slide .bg .btm p {width:100%; text-align:left; margin-top:12px;}
+    main .store .store_wrap .store-slide .swiper-button-prev {left:20px;}
+    main .store .store_wrap .store-slide .swiper-button-next {right:20px;}
 }

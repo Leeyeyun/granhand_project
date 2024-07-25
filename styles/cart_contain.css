@@ -85,6 +85,9 @@ main .cart > .cart_list input[name*=select] {
 main .cart > .cart_list input[name*=select]:checked {
     background-image:url(../images/checked.svg);
 }
+main .cart > .cart_list input[name*=select].active {
+    background-image:url(../images/checked.svg);
+}
 
 /* 상품 삭제 버튼 */
 main .cart > .cart_list .cart_contents .cart_item .product_info .product_select .item_wrap a:last-child {border:1px solid red;}
