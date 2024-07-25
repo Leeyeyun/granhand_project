@@ -70,6 +70,45 @@ const sub_close_arrow = m_nav_lnb.querySelectorAll('nav .gnb > li > a > img')
 const m_lnb = document.querySelector('.m_lnb')
 console.log(m_lnb)
 
+//링크 #으로 없애기
+for(let i of m_gnb_li_a){
+    i.href = '#'
+}
+m_gnb_li_a[3].href = './wallpaper.html'
+
+//sub 초기값 : sub 닫기
+for(let i of m_nav_sub){
+    i.style.height = '0';
+    i.style.overflow = 'hidden'
+    i.style.opacity = '0'
+}
+for(let i of m_gnb_li_a){
+    i.addEventListener('click',(e)=>{
+        if (i !== m_gnb_li_a[m_gnb_li_a.length - 1]) {
+            e.preventDefault();
+        }
+        for(let a of sub_close_arrow){
+            a.style.transform = 'rotate(0)'
+        }
+        for(let j of m_nav_sub){
+            j.style.transition = 'height 0.3s, overflow 0.3s, opacity 0.3s'
+            j.style.height = '0'
+            j.style.overflow = 'hidden'
+            j.style.opacity = '0'
+
+        }
+        i.children[0].style.transition = 'transform 0.5s'
+        i.children[0].style.transform = 'rotate(-180deg)'
+        /* i.nextElementSibling.style.height = '100%' */
+        i.nextElementSibling.style.overflow = 'visible'
+        i.nextElementSibling.style.opacity = '1'
+        if (i.nextElementSibling.children.length == 7){
+            i.nextElementSibling.style.height = `calc(32px * ${i.nextElementSibling.children.length} + 16px)`
+        }else {i.nextElementSibling.style.height = `calc(32px * ${i.nextElementSibling.children.length})`}
+        console.log(i.nextElementSibling.children.length)
+    })
+}
+
 //all_nav 클릭 시 m_nav 등장
 all_nav.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -133,46 +172,15 @@ nav_close.addEventListener('click',(e)=>{
     m_nav_wrap.children[3].style.transition = 'opacity 0.3s ease-in-out';
     m_nav_wrap.children[3].style.opacity = '0'
     document.body.style.overflow = 'visible';
+    for(let i of m_nav_sub){
+        i.style.height = '0';
+        i.style.overflow = 'hidden'
+        i.style.opacity = '0'
+    }
+    for(let a of sub_close_arrow){
+        a.style.transform = 'rotate(0)'
+    }
 })
-
-//링크 #으로 없애기
-for(let i of m_gnb_li_a){
-    i.href = '#'
-}
-m_gnb_li_a[3].href = './wallpaper.html'
-
-//sub 초기값 : sub 닫기
-for(let i of m_nav_sub){
-    i.style.height = '0';
-    i.style.overflow = 'hidden'
-    i.style.opacity = '0'
-}
-for(let i of m_gnb_li_a){
-    i.addEventListener('click',(e)=>{
-        if (i !== m_gnb_li_a[m_gnb_li_a.length - 1]) {
-            e.preventDefault();
-        }
-        for(let a of sub_close_arrow){
-            a.style.transform = 'rotate(0)'
-        }
-        for(let j of m_nav_sub){
-            j.style.transition = 'height 0.3s, overflow 0.3s, opacity 0.3s'
-            j.style.height = '0'
-            j.style.overflow = 'hidden'
-            j.style.opacity = '0'
-
-        }
-        i.children[0].style.transition = 'transform 0.5s'
-        i.children[0].style.transform = 'rotate(-180deg)'
-        /* i.nextElementSibling.style.height = '100%' */
-        i.nextElementSibling.style.overflow = 'visible'
-        i.nextElementSibling.style.opacity = '1'
-        if (i.nextElementSibling.children.length == 7){
-            i.nextElementSibling.style.height = `calc(32px * ${i.nextElementSibling.children.length} + 16px)`
-        }else {i.nextElementSibling.style.height = `calc(32px * ${i.nextElementSibling.children.length})`}
-        console.log(i.nextElementSibling.children.length)
-    })
-}
 
 //모바일 search btn 클릭 시 검색창 등장
 const m_search = m_nav_lnb.children[0].children[0]
