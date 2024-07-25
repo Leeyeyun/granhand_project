@@ -35,13 +35,16 @@ const swiper2 = new Swiper('.store-slide',{
 const swiper3 = new Swiper('.sub-journal-slide',{
     effect:'',
     autoplay:false,
-    slidesPerView:2,
+    slidesPerView:1,
     spaceBetween:18,
     scrollbar: {
         el:'.swiper-scrollbar',
         draggable:true,
         hide:false,
     },
+    breakpoints : {
+        400:{slidesPerView:2}
+    }
     /* spaceBetween:60, //위 slidesPerview 여백 */
 });
 

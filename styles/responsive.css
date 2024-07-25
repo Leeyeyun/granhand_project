@@ -226,6 +226,12 @@
 }
 
 @media screen and (max-width:500px){
+    main .sub_link {margin:100px 0 16px;}
+    main .sub_link .title {font-size:1.25rem;}
+    main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_contents h2 {font-size:1rem;}
+    main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_contents h3 {font-size:0.875rem;}
+    main .store .store_wrap .store-slide {height:68%;}
+    main .journal .journal_wrap .sub_link a {padding-top:0;}
     /* header */
     header {height:100px;}
     header .logo a img {width:65%;}
@@ -265,6 +271,13 @@
 }
 
 @media screen and (max-width:390px){
+    main .shop .shop_wrap .shop-slide .swiper-wrapper .swiper-slide .product_contents > p {height:auto;}
+    main .store .store_wrap .store-slide {height:65%;}
+    main .journal .journal_wrap .journal_contents .j_main {height:250px;}
+    /* main-brand font 크기 */
+    main .brand .brand_wrap .brand_txt h2 {font-size:1.65rem;}
+    main .brand .brand_wrap .brand_txt p {font-size:0.75rem; width:80%; word-break:keep-all;}
+    main .brand .brand_wrap .brand_txt p br {display:none;}
     /* sub-store */
     main .store_container .store_main .store_title h2,
     main .store_container .store_main .store_title .location {font-size:0.75rem;}

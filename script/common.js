@@ -45,6 +45,8 @@ lang.addEventListener('click',(e)=>{
     lang_opt.classList.toggle('on')
 })
 
+let boolean = false;
+
 //m_nav 모바일 전용 메뉴
 const nav = document.querySelector('nav')
 const nav_clone = nav.cloneNode(true) //nav 복제 변수
@@ -53,46 +55,91 @@ const m_nav_wrap = document.querySelector('.m_nav_wrap')
 const m_nav_lnb = document.querySelector('.m_nav_lnb')
 const all_nav = document.querySelector('.all_nav')
 const m_nav_bg = document.querySelector('.m_nav_bg')
-/* document.body.style.overflowX = 'hidden'; */
 
+//m_nav 복제 및 초기값 설정
 m_nav_lnb.appendChild(nav_clone)
 
-m_nav_wrap.style.display = 'none'
-
-
-m_nav_bg.style.opacity = '0'
-m_nav_bg.style.display = 'none'
-
-all_nav.addEventListener('click',(e)=>{
-    e.preventDefault();
-    m_nav_wrap.style.display = 'block'
-    all_nav.style.display = 'none'
-    document.body.style.overflow = 'hidden';
-    m_nav_bg.style.transition = 'opacity 0.5s display 0.5s'
-    m_nav_bg.style.display = 'block'
-    m_nav_bg.style.opacity = '1'
-})
-
-//m_nav close 버튼 클릭 시 m_nav 닫기
+//m_nav close 버튼
 const nav_close = m_nav_wrap.querySelector('.close')
+const m_gnb_li = m_nav_wrap.querySelectorAll('nav .gnb > li')
 const m_gnb_li_a = m_nav_lnb.querySelectorAll('nav .gnb > li > a')
 const m_nav_sub = m_nav_lnb.querySelectorAll('nav .gnb > li .sub')
 const sub_close_arrow = m_nav_lnb.querySelectorAll('nav .gnb > li > a > img')
+
+//m_nav 안 콘텐츠
+const m_lnb = document.querySelector('.m_lnb')
+console.log(m_lnb)
+
+//all_nav 클릭 시 m_nav 등장
+all_nav.addEventListener('click',(e)=>{
+    e.preventDefault();
+    /* m_nav animaition 설정 */
+    m_nav_wrap.style.animation = 'm_nav_open 0.8s both cubic-bezier(0.52, 0.02, 0.58, 1)'
+    m_nav_bg.style.animation = 'bg_opa 0.8s both'
+    //bg
+    m_nav_bg.style.opacity = '0.5'
+    m_nav_bg.style.display = 'block'
+    for(let j of m_lnb.children){
+        j.style.opacity = '1'
+        j.style.transform = 'translateY(0)'
+    }
+    m_lnb.children[0].style.transition = 'opacity 0.7s 0.3s ease-in-out, transform 0.7s 0.3s ease-in-out'
+    m_lnb.children[1].style.transition = 'opacity 0.7s 0.5s ease-in-out, transform 0.7s 0.3s ease-in-out'
+    m_lnb.children[2].style.transition = 'opacity 0.7s 0.7s ease-in-out, transform 0.7s 0.3s ease-in-out'
+    m_gnb_li[0].style.transition = 'opacity 0.7s 0.3s ease-in-out, transform 0.7s 0.3s ease-in-out'
+    m_gnb_li[1].style.transition = 'opacity 0.7s 0.4s ease-in-out, transform 0.7s 0.4s ease-in-out'
+    m_gnb_li[2].style.transition = 'opacity 0.7s 0.5s ease-in-out, transform 0.7s 0.5s ease-in-out'
+    m_gnb_li[3].style.transition = 'opacity 0.7s 0.6s ease-in-out, transform 0.7s 0.6s ease-in-out'
+    
+    for(let i of m_gnb_li){
+        i.style.opacity = '1'
+        i.style.transform = 'translateY(0)'
+    }
+    //하단 링크
+    m_nav_wrap.children[2].style.transition = 'opacity 0.7s 0.6s ease-in-out';
+    m_nav_wrap.children[2].style.opacity = '1'
+    m_nav_wrap.children[3].style.transition = 'opacity 0.7s 0.8s ease-in-out';
+    m_nav_wrap.children[3].style.opacity = '1'
+    document.body.style.overflow = 'hidden';
+})
+
+//nav_close 클릭 시 m_nav 사라지기
+nav_close.addEventListener('click',(e)=>{
+    e.preventDefault();
+    m_nav_wrap.style.animation = 'm_nav_close 0.8s both cubic-bezier(0.52, 0.02, 0.58, 1)'
+    m_nav_bg.style.animation = 'bg_opa_c 0.8s both'
+    //bg
+    m_nav_bg.style.opacity = '0'
+    m_nav_bg.style.display = 'none'
+    for(let j of m_lnb.children){
+        j.style.opacity = ''
+        j.style.transform = ''
+    }
+    m_lnb.children[0].style.transition = 'opacity 0.2s ease-in-out, transform 0.2s ease-in-out'
+    m_lnb.children[1].style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out'
+    m_lnb.children[2].style.transition = 'opacity 0.4s ease-in-out, transform 0.4s ease-in-out'
+    //gnb_li
+    for(let i of m_gnb_li){
+        i.style.opacity = ''
+        i.style.transform = ''
+    }
+    m_gnb_li[0].style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out'
+    m_gnb_li[1].style.transition = 'opacity 0.4s ease-in-out, transform 0.4s ease-in-out'
+    m_gnb_li[2].style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out'
+    m_gnb_li[3].style.transition = 'opacity 0.2s ease-in-out, transform 0.2s ease-in-out'
+    //하단 링크
+    m_nav_wrap.children[2].style.transition = 'opacity 0.4s ease-in-out';
+    m_nav_wrap.children[2].style.opacity = '0'
+    m_nav_wrap.children[3].style.transition = 'opacity 0.3s ease-in-out';
+    m_nav_wrap.children[3].style.opacity = '0'
+    document.body.style.overflow = 'visible';
+})
 
 //링크 #으로 없애기
 for(let i of m_gnb_li_a){
     i.href = '#'
 }
 m_gnb_li_a[3].href = './wallpaper.html'
-
-nav_close.addEventListener('click',(e)=>{
-    e.preventDefault();
-    m_nav_wrap.style.display = 'none'
-    all_nav.style.display = 'block'
-    m_nav_bg.style.display = 'none'
-    m_nav_bg.style.opacity = '0'
-    document.body.style.overflow = '';
-})
 
 //sub 초기값 : 처음 sub만 보이고 나머지 닫기
 for(let i of m_nav_sub){
