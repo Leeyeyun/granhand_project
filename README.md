@@ -43,3 +43,8 @@ header .lnb #lang_frm .lang_wrap #lang_option {
 #### 어려웠던 점
 * 스크롤이 이중으로 나오는 오류 발생
 * 오류의 원인 : html 자체에 css를 적용해서 발생됨. 수정됨
+## 24.07.25
+### 반응형 서브페이지 제작 (장바구니 / 로그인 / 회원가입) & 모바일 내비 애니메이션
+#### 어려웠던 점
+* 애니메이션 작업할 때 transition이 적용이 안 된다!
+* 해결 : animation keyframe으로 작업하여 적용한다 (transition은 상대적, animation은 절대적!)
