@@ -5,7 +5,6 @@ header .lnb .m_nav > a {filter:invert(1);}
 header nav .gnb > li > a {color:#282828;}
 header nav .gnb > li:last-child > a::after {width:100%;}
 header nav .gnb > li > a::after {background-color:#282828;}
-.m_nav .m_nav_wrap {position:absolute;}
 
 /* main */
 main {padding-top:130px;}
